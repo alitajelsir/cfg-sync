@@ -1,0 +1,9 @@
+system:
+  env:
+    DXVK_HUD: fps
+    DXVK_LOG_LEVEL: none
+    DXVK_STATE_CACHE_PATH: ''
+    WINE_LARGE_ADDRESS_AWARE: '1'
+    __GL_AllowPTEFallbackToSysmem: '1'
+    __GL_SHADER_DISK_CACHE_PATH: ''
+  reset_desktop: true
