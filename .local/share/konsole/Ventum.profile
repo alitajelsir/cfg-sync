@@ -21,7 +21,7 @@ TerminalRows=28
 [Interaction Options]
 OpenLinksByDirectClickEnabled=false
 TextEditorCmd=6
-TextEditorCmdCustom=featherpad +LINE:COLUMN PATH
+TextEditorCmdCustom=featherpad +LINE,COLUMN PATH
 UnderlineFilesEnabled=true
 
 [Scrolling]
