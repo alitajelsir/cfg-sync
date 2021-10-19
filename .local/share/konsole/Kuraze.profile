@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=false
-ColorScheme=ventum
+ColorScheme=kuraze
 Font=FiraCode Nerd Font Mono,10,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
@@ -12,7 +12,7 @@ UseCustomCursorColor=false
 [General]
 Command=/bin/zsh
 DimWhenInactive=true
-Name=Ventum
+Name=Kuraze
 Parent=FALLBACK/
 TerminalCenter=false
 TerminalColumns=110
