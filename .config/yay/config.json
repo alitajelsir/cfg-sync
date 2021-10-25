@@ -1,7 +1,6 @@
 {
 	"aururl": "https://aur.archlinux.org",
 	"buildDir": "/home/ali/.cache/yay",
-	"absdir": "/home/ali/.cache/yay/abs",
 	"editor": "",
 	"editorflags": "",
 	"makepkgbin": "makepkg",
@@ -29,7 +28,7 @@
 	"completionrefreshtime": 7,
 	"sudoloop": true,
 	"timeupdate": false,
-	"devel": false,
+	"devel": true,
 	"cleanAfter": false,
 	"provides": true,
 	"pgpfetch": true,
@@ -39,5 +38,5 @@
 	"editmenu": true,
 	"combinedupgrade": true,
 	"useask": false,
-	"batchinstall": false
+	"batchinstall": true
 }
