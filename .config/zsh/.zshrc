@@ -118,7 +118,7 @@ alias aria2c='aria2c --dir=$HOME/Downloads'
 alias awiki=wiki-search-html
 alias cfg="git --git-dir=$HOME/.config/cfg-sync --work-tree=$HOME"
 alias cp='cp -iv'
-alias exa='exa -aF --icons --group-directories-first'
+alias exa='exa -aF --icons --group-directories-first -b'
 alias fd='fd -HI'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
