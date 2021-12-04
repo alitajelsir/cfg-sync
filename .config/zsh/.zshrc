@@ -4,7 +4,7 @@
 
 # Znap plugin manager
 [ -f $XDG_DATA_HOME/znap/zsh-snap/znap.zsh ] ||
-	git clone https://github.com/marlonrichert/zsh-snap.git $XDG_DATA_HOME/znap/zsh-snap/
+	git clone --depth 1 https://github.com/marlonrichert/zsh-snap.git $XDG_DATA_HOME/znap/zsh-snap/
 source $XDG_DATA_HOME/znap/zsh-snap/znap.zsh
 
 # Directories
@@ -48,10 +48,6 @@ setopt CORRECT
 # Trap SIGUSR1 and rehash
 trap 'rehash' USR1
 
-# Z Colors
-znap source marlonrichert/zcolors
-znap eval zcolors zcolors
-
 # Autosuggestion
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
@@ -61,12 +57,16 @@ znap source zsh-users/zsh-autosuggestions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 typeset -A ZSH_HIGHLIGHT_PATTERNS
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216')
+znap source zsh-users/zsh-syntax-highlighting
+
+# Z Colors
+znap source marlonrichert/zcolors
+znap eval zcolors zcolors
 ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue'
 ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=green'
 ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[bracket-level-5]='fg=cyan'
-znap source zsh-users/zsh-syntax-highlighting
 
 # History Substring Search
 znap source zsh-users/zsh-history-substring-search
@@ -114,27 +114,28 @@ command_not_found_handler() {
 
 # Aliases
 alias -g '$= '
-alias aria2c='aria2c --dir=$HOME/Downloads'
+alias aria2c="aria2c --dir=$HOME/Downloads"
 alias awiki=wiki-search-html
 alias cfg="git --git-dir=$HOME/.config/cfg-sync --work-tree=$HOME"
 alias cp='cp -iv'
 alias exa='exa -aF --icons --group-directories-first -b'
 alias fd='fd -HI'
-alias ffmpeg='ffmpeg -hide_banner'
+alias ffmpeg="systemd-inhibit --who=ffmpeg --why='video editing' ffmpeg -hide_banner"
 alias ffprobe='ffprobe -hide_banner'
-alias h=run-help
+alias h=man
 alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
 alias kl='killall -KILL'
-alias kudl="yt-dlp -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
+alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias ls=exa
 alias mv='mv -iv'
+alias oh="col -bx | bat -l man --theme='Monokai Extended' -p"
 alias pvc='protonvpn-cli c --cc US'
 alias pvd='protonvpn-cli d'
 alias pvs='protonvpn-cli s'
 alias rm='rm -Iv'
 alias rs='rsync -ah --progress'
 alias sudo='sudo $'
-alias yay='systemd-inhibit yay'
-alias ydl=yt-dlp
-alias ydla="yt-dlp -x -f 'bestaudio/best'"
+alias yay="systemd-inhibit --who=yay --why='package maintenance' yay"
+alias ydl="systemd-inhibit --who=yt-dlp --why='downloading videos' yt-dlp"
+alias ydla="ydl -x -f 'bestaudio/best'"
 alias zup='znap pull'
