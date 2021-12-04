@@ -46,10 +46,6 @@ unsetopt EXTENDED_HISTORY
 # Input and Output
 setopt CORRECT
 
-# Z Colors
-znap source marlonrichert/zcolors
-znap eval zcolors zcolors
-
 # Autosuggestion
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
@@ -59,12 +55,16 @@ znap source zsh-users/zsh-autosuggestions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 typeset -A ZSH_HIGHLIGHT_PATTERNS
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216')
+znap source zsh-users/zsh-syntax-highlighting
+
+# Z Colors
+znap source marlonrichert/zcolors
+znap eval zcolors zcolors
 ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue'
 ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=green'
 ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[bracket-level-5]='fg=cyan'
-znap source zsh-users/zsh-syntax-highlighting
 
 # History Substring Search
 znap source zsh-users/zsh-history-substring-search
@@ -88,13 +88,13 @@ znap source romkatv/powerlevel10k
 # Aliases
 alias cfg="git --git-dir=$HOME/.config/cfg-sync/ --work-tree=$HOME"
 alias cp='cp -iv'
-alias exa='exa -aF --group-directories-first --icons'
-alias fd='fd -HIL'
+alias exa='exa -aF --group-directories-first --icons -b'
+alias fd='fd -HL'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
-alias h=run-help
+alias h=man
 alias kl='killall -KILL'
-alias kudl="yt-dlp -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
+alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias ls=exa
 alias mv='mv -iv'
 alias open=termux-open
@@ -104,5 +104,5 @@ alias cget=termux-clipboard-get
 alias cset=termux-clipboard-set
 alias vi=nvim
 alias ydl=yt-dlp
-alias ydla="yt-dlp -x -f 'bestaudio/best'"
+alias ydla="ydl -x -f 'bestaudio/best'"
 alias zup='znap pull'
