@@ -2,14 +2,14 @@
 	email = alitajelsir@gmail.com
 	name = Ali Tajelsir
 [color "decorate"]
-	HEAD = 14 normal italic
+	HEAD = 14 normal dim
 	remotebranch = 13 normal
 	grafted = 1 normal italic
 	tag = 3 normal
 	stash = 8 normal
 	branch = 14 normal
 [color "diff"]
-	whitespace = normal reverse
+	whitespace = normal 9
 	commit = 3 normal
 	func = 8 normal ul
 	newMoved = 14 normal
