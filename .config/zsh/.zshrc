@@ -86,6 +86,7 @@ znap source kutsan/zsh-system-clipboard
 znap source romkatv/powerlevel10k
 
 # Aliases
+alias -g '$= '
 alias cfg="git --git-dir=$HOME/.config/cfg-sync/ --work-tree=$HOME"
 alias cp='cp -iv'
 alias exa='exa -aF --group-directories-first --icons -b'
@@ -97,6 +98,7 @@ alias kl='killall -KILL'
 alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias ls=exa
 alias mv='mv -iv'
+alias oh="col -bx | bat -l man --theme 'Monokai Extended' -p"
 alias open=termux-open
 alias rm='rm -Iv'
 alias rs='rsync -ah --progress'
