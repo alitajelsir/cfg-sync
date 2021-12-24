@@ -20,7 +20,8 @@
 --sub-lang en.*,ar
 
 # Post-processing options
---audio-format opus
+--audio-format m4a
 --audio-quality 0
 --embed-subs
+--embed-thumbnail
 --add-metadata
