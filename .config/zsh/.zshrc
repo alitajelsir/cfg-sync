@@ -4,7 +4,7 @@
 
 # Znap plugin manager
 [ -f $XDG_DATA_HOME/znap/zsh-snap/znap.zsh ] ||
-	git clone --depth 1 https://github.com/marlonrichert/zsh-snap.git $XDG_DATA_HOME/znap/zsh-snap/
+	git clone https://github.com/marlonrichert/zsh-snap.git $XDG_DATA_HOME/znap/zsh-snap/
 source $XDG_DATA_HOME/znap/zsh-snap/znap.zsh
 
 # Directories
@@ -19,7 +19,7 @@ chpwd_dirstack() {
 	print -l -- "$PWD" "${(u)dirstack[@]}" > "$DIRSTACKFILE"
 }
 add-zsh-hook -Uz chpwd chpwd_dirstack
-DIRSTACKSIZE='20'
+DIRSTACKSIZE='10'
 
 # Completion
 zstyle ':completion:*' menu select
@@ -114,13 +114,13 @@ command_not_found_handler() {
 
 # Aliases
 alias -g '$= '
-alias aria2c="aria2c --dir=$HOME/Downloads"
+alias aria2c="aria2c --dir ~/Downloads"
 alias awiki=wiki-search-html
-alias cfg="git --git-dir=$HOME/.config/cfg-sync --work-tree=$HOME"
+alias cfg="git --git-dir ~/.config/cfg-sync --work-tree ~"
 alias cp='cp -iv'
 alias exa='exa -aF --icons --group-directories-first -b'
 alias fd='fd -HI'
-alias ffmpeg="systemd-inhibit --who=ffmpeg --why='video editing' ffmpeg -hide_banner"
+alias ffmpeg="systemd-inhibit --who ffmpeg --what sleep --why=video\ editing ffmpeg -hide_banner"
 alias ffprobe='ffprobe -hide_banner'
 alias h=man
 alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
@@ -128,14 +128,14 @@ alias kl='killall -KILL'
 alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias ls=exa
 alias mv='mv -iv'
-alias oh="col -bx | bat -l man --theme='Monokai Extended' -p"
+alias oh='col -bx | bat -l man --theme Monokai\ Extended -p'
 alias pvc='protonvpn-cli c --cc US'
 alias pvd='protonvpn-cli d'
 alias pvs='protonvpn-cli s'
 alias rm='rm -Iv'
-alias rs='rsync -ah --progress'
+alias rs='rsync -h --progress'
 alias sudo='sudo $'
-alias yay="systemd-inhibit --who=yay --why='package maintenance' yay"
-alias ydl="systemd-inhibit --who=yt-dlp --why='downloading videos' yt-dlp"
-alias ydla="ydl -x -f 'bestaudio/best'"
+alias yay='systemd-inhibit --who yay --what sleep --why package\ maintenance yay'
+alias ydl='systemd-inhibit --who yt-dlp --what sleep --why media\ download yt-dlp'
+alias ydla='ydl -P ~/Audio/YouTube -x -f bestaudio/best'
 alias zup='znap pull'
