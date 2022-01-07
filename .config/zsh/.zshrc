@@ -87,7 +87,7 @@ znap source romkatv/powerlevel10k
 
 # Aliases
 alias -g '$= '
-alias cfg="git --git-dir ~/.config/cfg-sync/ --work-tree ~"
+alias cfg="git --git-dir $HOME/.config/cfg-sync/ --work-tree $HOME"
 alias cp='cp -iv'
 alias exa='exa -aF --group-directories-first --icons -b'
 alias fd='fd -HL'
