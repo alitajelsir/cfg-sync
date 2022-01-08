@@ -1,9 +1,13 @@
 system:
+  disable_compositor: true
+  disable_screen_saver: false
   env:
-    DXVK_HUD: fps
-    DXVK_LOG_LEVEL: none
-    DXVK_STATE_CACHE_PATH: ''
+    DXVK_FRAME_RATE: '60'
+    DXVK_HUD: full
+    DXVK_LOG_LEVEL: debug
+    DXVK_STATE_CACHE: '1'
     WINE_LARGE_ADDRESS_AWARE: '1'
     __GL_AllowPTEFallbackToSysmem: '1'
-    __GL_SHADER_DISK_CACHE_PATH: ''
-  reset_desktop: true
+    __GL_SHADER_DISK_CACHE: '1'
+  prime: true
+  restore_gamma: true
