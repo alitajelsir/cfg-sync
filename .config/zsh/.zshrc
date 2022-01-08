@@ -114,9 +114,9 @@ command_not_found_handler() {
 
 # Aliases
 alias -g '$= '
-alias aria2c="aria2c --dir ~/Downloads"
+alias aria2c="aria2c --dir $HOME/Downloads"
 alias awiki=wiki-search-html
-alias cfg="git --git-dir ~/.config/cfg-sync --work-tree ~"
+alias cfg="git --git-dir $HOME/.config/cfg-sync --work-tree $HOME"
 alias cp='cp -iv'
 alias exa='exa -aF --icons --group-directories-first -b'
 alias fd='fd -HI'
@@ -137,5 +137,5 @@ alias rs='rsync -h --progress'
 alias sudo='sudo $'
 alias yay='systemd-inhibit --who yay --what sleep --why package\ maintenance yay'
 alias ydl='systemd-inhibit --who yt-dlp --what sleep --why media\ download yt-dlp'
-alias ydla='ydl -P ~/Audio/YouTube -x -f bestaudio/best'
+alias ydla='ydl -P $HOME/Audio/YouTube -x -f bestaudio/best'
 alias zup='znap pull'
