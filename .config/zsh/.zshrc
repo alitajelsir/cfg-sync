@@ -19,7 +19,7 @@ chpwd_dirstack() {
 	print -l -- "$PWD" "${(u)dirstack[@]}" > "$DIRSTACKFILE"
 }
 add-zsh-hook -Uz chpwd chpwd_dirstack
-DIRSTACKSIZE='20'
+DIRSTACKSIZE='10'
 
 # Completion
 zstyle ':completion:*' menu select
@@ -86,7 +86,6 @@ znap source kutsan/zsh-system-clipboard
 znap source romkatv/powerlevel10k
 
 # Aliases
-alias -g '$= '
 alias cfg="git --git-dir $HOME/.config/cfg-sync/ --work-tree $HOME"
 alias cp='cp -iv'
 alias exa='exa -aF --group-directories-first --icons -b'
