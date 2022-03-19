@@ -44,7 +44,7 @@ setopt HIST_VERIFY SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
 # Input and Output
-setopt CORRECT
+setopt CORRECT INTERACTIVE_COMMENTS
 
 # Autosuggestion
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
