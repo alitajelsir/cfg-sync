@@ -43,7 +43,7 @@ setopt HIST_VERIFY SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
 # Input and Output
-setopt CORRECT
+setopt CORRECT INTERACTIVE_COMMENTS
 
 # Trap SIGUSR1 and rehash
 trap 'rehash' USR1
