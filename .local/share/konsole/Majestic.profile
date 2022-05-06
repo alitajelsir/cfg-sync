@@ -1,8 +1,8 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=false
-ColorScheme=kuraze
-Font=FiraCode Nerd Font Mono,10,-1,5,50,0,0,0,0,0
+ColorScheme=majestic
+Font=FiraCode Nerd Font Mono,10,-1,5,25,0,0,0,0,0,Light
 UseFontLineChararacters=true
 
 [Cursor Options]
@@ -12,7 +12,7 @@ UseCustomCursorColor=false
 [General]
 Command=/bin/zsh
 DimWhenInactive=true
-Name=Kuraze
+Name=Majestic
 Parent=FALLBACK/
 TerminalCenter=false
 TerminalColumns=110

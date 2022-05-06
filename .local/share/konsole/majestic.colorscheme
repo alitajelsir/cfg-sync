@@ -89,8 +89,11 @@ Color=239,240,241
 Color=255,255,255
 
 [General]
+Anchor=0.5,0.5
 Blur=false
 ColorRandomization=false
-Description=Kuraze
+Description=Majestic
+FillStyle=Tile
 Opacity=1
 Wallpaper=
+WallpaperOpacity=1
