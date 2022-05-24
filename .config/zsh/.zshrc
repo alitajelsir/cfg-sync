@@ -115,12 +115,11 @@ command_not_found_handler() {
 # Aliases
 alias -g '$= '
 alias aria2c="aria2c --dir $HOME/Downloads"
-alias awiki=wiki-search-html
 alias cfg="git --git-dir $HOME/.config/cfg-sync --work-tree $HOME"
 alias cp='cp -iv'
 alias exa='exa -aF --icons --group-directories-first -b'
 alias fd='fd -HI'
-alias ffmpeg="systemd-inhibit --who ffmpeg --what sleep --why=video\ editing ffmpeg -hide_banner"
+alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 alias h=man
 alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
@@ -135,7 +134,6 @@ alias pvs='protonvpn-cli s'
 alias rm='rm -Iv'
 alias rs='rsync -h --progress'
 alias sudo='sudo $'
-alias yay='systemd-inhibit --who yay --what sleep --why package\ maintenance yay'
-alias ydl='systemd-inhibit --who yt-dlp --what sleep --why media\ download yt-dlp'
-alias ydla='ydl -P $HOME/Audio/YouTube -x -f bestaudio/best'
+alias ydl=yt-dlp
+alias ydla="ydl -P $HOME/Audio/YouTube -x -f ba/b --remux-video mka"
 alias zup='znap pull'
