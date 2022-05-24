@@ -8,6 +8,7 @@
 --paths $HOME/Videos/YouTube
 --output %(title)s.%(ext)s
 --output chapter:%(title)s/%(section_number)02d-%(section_title)s.%(ext)s
+--cookies-from-browser firefox
 
 # Video format options
 --format bestvideo+bestaudio/best
@@ -19,8 +20,6 @@
 --sub-lang en.*,ar
 
 # Post-processing options
---audio-format m4a
---audio-quality 0
 --embed-subs
 --embed-thumbnail
 --add-metadata
