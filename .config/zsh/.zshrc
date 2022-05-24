@@ -105,5 +105,5 @@ alias cget=termux-clipboard-get
 alias cset=termux-clipboard-set
 alias vi=nvim
 alias ydl=yt-dlp
-alias ydla='ydl -x -f ba/b --remux-video mka'
+alias ydla='ydl -P /sdcard/Music/YouTube -x -f ba/b --remux-video mka'
 alias zup='znap pull'
