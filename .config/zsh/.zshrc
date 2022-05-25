@@ -135,5 +135,5 @@ alias rm='rm -Iv'
 alias rs='rsync -h --progress'
 alias sudo='sudo $'
 alias ydl=yt-dlp
-alias ydla="ydl -P $HOME/Audio/YouTube -x -f ba/b --remux-video mka"
+alias ydla="ydl -P $HOME/Audio/YouTube -x -f ba/b"
 alias zup='znap pull'
