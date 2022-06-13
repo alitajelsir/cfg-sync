@@ -20,7 +20,7 @@ TerminalRows=28
 
 [Interaction Options]
 OpenLinksByDirectClickEnabled=false
-TextEditorCmd=6
+TextEditorCmd=1
 UnderlineFilesEnabled=true
 
 [Scrolling]
