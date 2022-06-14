@@ -10,7 +10,7 @@ CursorShape=1
 UseCustomCursorColor=false
 
 [General]
-Command=/bin/zsh
+Command=/usr/bin/zsh
 DimWhenInactive=true
 Name=Elegance
 Parent=FALLBACK/
