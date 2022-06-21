@@ -56,7 +56,7 @@ znap source zsh-users/zsh-autosuggestions
 # Syntax Highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 typeset -A ZSH_HIGHLIGHT_PATTERNS
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216')
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216' 'sudo' 'fg=216')
 znap source zsh-users/zsh-syntax-highlighting
 
 # Z Colors
@@ -117,13 +117,11 @@ alias -g '$= '
 alias aria2c="aria2c --dir $HOME/Downloads"
 alias cfg="git --git-dir $HOME/.config/cfg-sync --work-tree $HOME"
 alias cp='cp -iv'
-alias exa='exa -aF --icons --group-directories-first -b'
+alias exa='exa -aFb --icons --group-directories-first'
 alias fd='fd -HI'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
-alias h=man
 alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
-alias kl='killall -KILL'
 alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias ls=exa
 alias mv='mv -iv'
@@ -132,8 +130,8 @@ alias pvc='protonvpn-cli c --cc US'
 alias pvd='protonvpn-cli d'
 alias pvs='protonvpn-cli s'
 alias rm='rm -Iv'
-alias rs='rsync -h --progress'
-alias sudo='sudo $'
+alias rsync='rsync -hP'
+alias sudo='sudo '
 alias ydl=yt-dlp
 alias ydla="ydl -P $HOME/Audio/YouTube -x -f ba/b"
 alias zup='znap pull'
