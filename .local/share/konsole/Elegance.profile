@@ -11,12 +11,12 @@ UseCustomCursorColor=false
 
 [General]
 Command=/usr/bin/zsh
-DimWhenInactive=true
+DimWhenInactive=false
 Name=Elegance
 Parent=FALLBACK/
 TerminalCenter=false
-TerminalColumns=110
-TerminalRows=28
+TerminalColumns=164
+TerminalRows=38
 
 [Interaction Options]
 OpenLinksByDirectClickEnabled=false
