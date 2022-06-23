@@ -1,6 +1,8 @@
 [user]
-	name = alitajelsir
+	name = Ali Tajelsir
 	email = alitajelsir@gmail.com
+[core]
+	pager = less -R
 [diff]
 	tool = meld
 	colorMoved = zebra
@@ -12,6 +14,9 @@
 	tool = meld
 [mergetool "meld"]
 	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+[alias]
+	cm = commit -m
+	ss = status -sb
 [color "status"]
 	branch = 14 normal
 	added = 10 normal
@@ -68,26 +73,13 @@
 	stash = 8 normal
 	grafted = 1 normal italic
 	HEAD = 14 normal dim
-[core]
-	pager = less -R
-[alias]
-	ss = status -sb
-	cm = commit -m
-	ph = push
-	pl = pull
-	df = diff
-[color "grep"]
-	filename = 7 normal
-	function = 10 normal
-	column = 8 normal
-	linenumber = 8 normal
 [maintenance]
+	repo = /home/ali/.local/share/znap/fast-syntax-highlighting
 	repo = /home/ali/.local/share/znap/powerlevel10k
 	repo = /home/ali/.local/share/znap/zcolors
 	repo = /home/ali/.local/share/znap/zsh-autosuggestions
 	repo = /home/ali/.local/share/znap/zsh-completions
 	repo = /home/ali/.local/share/znap/zsh-history-substring-search
 	repo = /home/ali/.local/share/znap/zsh-snap
-	repo = /home/ali/.local/share/znap/zsh-syntax-highlighting
 	repo = /home/ali/.local/share/znap/zsh-system-clipboard
 	repo = /home/ali/.local/share/znap/zsh-vim-mode
