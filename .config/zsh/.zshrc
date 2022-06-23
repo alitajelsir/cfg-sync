@@ -54,19 +54,11 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 znap source zsh-users/zsh-autosuggestions
 
 # Syntax Highlighting
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-typeset -A ZSH_HIGHLIGHT_PATTERNS
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216' 'sudo' 'fg=216')
-znap source zsh-users/zsh-syntax-highlighting
+znap source zdharma-continuum/fast-syntax-highlighting
 
 # Z Colors
 znap source marlonrichert/zcolors
 znap eval zcolors zcolors
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue'
-ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=green'
-ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=magenta'
-ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=yellow'
-ZSH_HIGHLIGHT_STYLES[bracket-level-5]='fg=cyan'
 
 # History Substring Search
 znap source zsh-users/zsh-history-substring-search
@@ -118,9 +110,10 @@ alias aria2c="aria2c --dir $HOME/Downloads"
 alias cfg="git --git-dir $HOME/.config/cfg-sync --work-tree $HOME"
 alias cp='cp -iv'
 alias exa='exa -aFb --icons --group-directories-first'
-alias fd='fd -HI'
+alias fd='fd -u'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
+alias grep='grep --color=auto'
 alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
 alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias ls=exa
