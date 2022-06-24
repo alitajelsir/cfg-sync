@@ -127,4 +127,3 @@ alias rsync='rsync -hP'
 alias sudo='sudo '
 alias ydl=yt-dlp
 alias ydla="ydl -P $HOME/Audio/YouTube -x -f ba/b"
-alias zup='znap pull'
