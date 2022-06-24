@@ -97,4 +97,3 @@ alias cset=termux-clipboard-set
 alias vi=nvim
 alias ydl=yt-dlp
 alias ydla='ydl -P /sdcard/Music/YouTube -x -f ba/b'
-alias zup='znap pull'
