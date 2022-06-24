@@ -52,19 +52,11 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 znap source zsh-users/zsh-autosuggestions
 
 # Syntax Highlighting
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-typeset -A ZSH_HIGHLIGHT_PATTERNS
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216')
-znap source zsh-users/zsh-syntax-highlighting
+znap source zdharma-continuum/fast-syntax-highlighting
 
 # Z Colors
 znap source marlonrichert/zcolors
 znap eval zcolors zcolors
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue'
-ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=green'
-ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=magenta'
-ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=yellow'
-ZSH_HIGHLIGHT_STYLES[bracket-level-5]='fg=cyan'
 
 # History Substring Search
 znap source zsh-users/zsh-history-substring-search
@@ -88,19 +80,18 @@ znap source romkatv/powerlevel10k
 # Aliases
 alias cfg="git --git-dir $HOME/.config/cfg-sync/ --work-tree $HOME"
 alias cp='cp -iv'
-alias exa='exa -aF --group-directories-first --icons -b'
-alias fd='fd -HL'
+alias exa='exa -aFb --group-directories-first --icons'
+alias fd='fd -uL'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
-alias h=man
-alias kl='killall -KILL'
+alias grep='grep --color=auto'
 alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias ls=exa
 alias mv='mv -iv'
-alias oh='col -bx | bat -l man --theme Monokai\ Extended -p'
+alias oh='col -bx | bat -l man --theme=Monokai\ Extended -p'
 alias open=termux-open
 alias rm='rm -Iv'
-alias rs='rsync -h --progress'
+alias rsync='rsync -hP'
 alias cget=termux-clipboard-get
 alias cset=termux-clipboard-set
 alias vi=nvim
