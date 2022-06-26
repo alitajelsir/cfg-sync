@@ -3,7 +3,7 @@ set mouse=a
 
 " Number column
 set number numberwidth=1
-highlight LineNr ctermbg=252 ctermfg=232
+highlight LineNr ctermbg=234 ctermfg=246
 
 " Tab
 set tabstop=2 shiftwidth=2
