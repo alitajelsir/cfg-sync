@@ -12,9 +12,8 @@ setopt AUTO_CD AUTO_PUSHD
 setopt CD_SILENT PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_SILENT PUSHD_TO_HOME
 autoload -Uz add-zsh-hook
 DIRSTACKFILE=$XDG_CACHE_HOME/zsh/dirs
-if [[ -f "$DIRSTACKFILE" ]] && (( ${#dirstack} == 0 )); then
+[ -f "$DIRSTACKFILE" ] && (( ${#dirstack} == 0 )) &&
 	dirstack=("${(@f)"$(< "$DIRSTACKFILE")"}")
-fi
 chpwd_dirstack() {
 	print -l -- "$PWD" "${(u)dirstack[@]}" > "$DIRSTACKFILE"
 }
@@ -36,8 +35,8 @@ setopt GLOB_DOTS
 
 # History
 HISTFILE=$ZDOTDIR/.zhistory
-HISTSIZE=11000
-SAVEHIST=10000
+HISTSIZE=1100
+SAVEHIST=1000
 setopt HIST_EXPIRE_DUPS_FIRST HIST_FIND_NO_DUPS HIST_IGNORE_ALL_DUPS HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_SPACE HIST_NO_FUNCTIONS HIST_NO_STORE HIST_REDUCE_BLANKS
 setopt HIST_VERIFY SHARE_HISTORY
@@ -46,6 +45,9 @@ unsetopt EXTENDED_HISTORY
 # Input and Output
 setopt CORRECT INTERACTIVE_COMMENTS
 
+# Help command
+autoload -Uz run-help
+
 # Autosuggestion
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
@@ -53,6 +55,7 @@ znap source zsh-users/zsh-autosuggestions
 
 # Syntax Highlighting
 znap source zdharma-continuum/fast-syntax-highlighting
+fast-theme -s | grep -Foqm1 elegance || fast-theme -q XDG:elegance
 
 # Z Colors
 znap source marlonrichert/zcolors
@@ -78,6 +81,8 @@ znap source kutsan/zsh-system-clipboard
 znap source romkatv/powerlevel10k
 
 # Aliases
+unalias run-help
+alias bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 alias cfg="git --git-dir $HOME/.config/cfg-sync/ --work-tree $HOME"
 alias cp='cp -iv'
 alias exa='exa -aFb --group-directories-first --icons'
@@ -87,8 +92,8 @@ alias ffprobe='ffprobe -hide_banner'
 alias grep='grep --color=auto'
 alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias ls=exa
+alias help=run-help
 alias mv='mv -iv'
-alias oh='col -bx | bat -l man --theme=Monokai\ Extended -p'
 alias open=termux-open
 alias rm='rm -Iv'
 alias rsync='rsync -hP'
