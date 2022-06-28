@@ -12,9 +12,8 @@ setopt AUTO_CD AUTO_PUSHD
 setopt CD_SILENT PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_SILENT PUSHD_TO_HOME
 autoload -Uz add-zsh-hook
 DIRSTACKFILE=$XDG_CACHE_HOME/zsh/dirs
-if [[ -f "$DIRSTACKFILE" ]] && (( ${#dirstack} == 0 )); then
+[ -f "$DIRSTACKFILE" ] && (( ${#dirstack} == 0 )) &&
 	dirstack=("${(@f)"$(< "$DIRSTACKFILE")"}")
-fi
 chpwd_dirstack() {
 	print -l -- "$PWD" "${(u)dirstack[@]}" > "$DIRSTACKFILE"
 }
@@ -45,8 +44,8 @@ unsetopt EXTENDED_HISTORY
 # Input and Output
 setopt CORRECT INTERACTIVE_COMMENTS
 
-# Trap SIGUSR1 and rehash
-trap 'rehash' USR1
+# Help command
+autoload -Uz run-help
 
 # Autosuggestion
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -55,6 +54,7 @@ znap source zsh-users/zsh-autosuggestions
 
 # Syntax Highlighting
 znap source zdharma-continuum/fast-syntax-highlighting
+fast-theme -s | grep -Foqm1 elegance || fast-theme -q XDG:elegance
 
 # Z Colors
 znap source marlonrichert/zcolors
@@ -78,6 +78,34 @@ znap source kutsan/zsh-system-clipboard
 # Powerlevel10k
 [ ! -f $ZDOTDIR/.p10k.zsh ] || source $ZDOTDIR/.p10k.zsh
 znap source romkatv/powerlevel10k
+
+# Aliases
+unalias run-help
+alias -g '$= '
+alias aria2c="aria2c --dir $HOME/Downloads"
+alias bh='col -bx | bat -pl help --theme=Monokai\ Extended'
+alias cfg="git --git-dir $HOME/.config/cfg-sync --work-tree $HOME"
+alias cp='cp -iv'
+alias exa='exa -aFb --icons --group-directories-first'
+alias fchrg='systemctl start charge-unlimit.service'
+alias fd='fd -u'
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
+alias grep='grep --color=auto'
+alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
+alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
+alias lchrg='systemctl start charge-limit.service'
+alias ls=exa
+alias help=run-help
+alias mv='mv -iv'
+alias pvc='protonvpn-cli c --cc US'
+alias pvd='protonvpn-cli d'
+alias pvs='protonvpn-cli s'
+alias rm='rm -Iv'
+alias rsync='rsync -hP'
+alias sudo='sudo '
+alias ydl=yt-dlp
+alias ydla="ydl -P $HOME/Audio/YouTube -x -f ba/b"
 
 # Command not found handler
 command_not_found_handler() {
@@ -104,26 +132,5 @@ command_not_found_handler() {
 	return 127
 }
 
-# Aliases
-alias -g '$= '
-alias aria2c="aria2c --dir $HOME/Downloads"
-alias cfg="git --git-dir $HOME/.config/cfg-sync --work-tree $HOME"
-alias cp='cp -iv'
-alias exa='exa -aFb --icons --group-directories-first'
-alias fd='fd -u'
-alias ffmpeg='ffmpeg -hide_banner'
-alias ffprobe='ffprobe -hide_banner'
-alias grep='grep --color=auto'
-alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
-alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
-alias ls=exa
-alias mv='mv -iv'
-alias oh='col -bx | bat -l man --theme Monokai\ Extended -p'
-alias pvc='protonvpn-cli c --cc US'
-alias pvd='protonvpn-cli d'
-alias pvs='protonvpn-cli s'
-alias rm='rm -Iv'
-alias rsync='rsync -hP'
-alias sudo='sudo '
-alias ydl=yt-dlp
-alias ydla="ydl -P $HOME/Audio/YouTube -x -f ba/b"
+# Trap SIGUSR1 and rehash
+trap 'rehash' USR1
