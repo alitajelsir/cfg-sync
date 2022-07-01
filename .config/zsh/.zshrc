@@ -92,11 +92,11 @@ alias fd='fd -u'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 alias grep='grep --color=auto'
+alias help=run-help
 alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
 alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 alias lchrg='systemctl start charge-limit.service'
 alias ls=exa
-alias help=run-help
 alias mv='mv -iv'
 alias pvc='protonvpn-cli c --cc US'
 alias pvd='protonvpn-cli d'
