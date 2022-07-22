@@ -6,7 +6,7 @@
 --external-downloader aria2c
 
 # Filesystem options
---paths /sdcard/Movies/YouTube
+--paths /sdcard/Download/yt-dlp
 --output %(title)s.%(ext)s
 --output chapter:%(title)s/%(section_number)02d-%(section_title)s.%(ext)s
 
