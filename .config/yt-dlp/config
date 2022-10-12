@@ -3,7 +3,7 @@
 
 # Download options
 --concurrent-fragments 5
---external-downloader aria2c
+--downloader aria2c
 
 # Filesystem options
 --paths /sdcard/Download/YT-DLP
