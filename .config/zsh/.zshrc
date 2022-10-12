@@ -46,6 +46,7 @@ unsetopt EXTENDED_HISTORY
 setopt CORRECT INTERACTIVE_COMMENTS
 
 # Help command
+unalias run-help
 autoload -Uz run-help
 
 # Autosuggestion
@@ -80,8 +81,7 @@ znap source kutsan/zsh-system-clipboard
 [ ! -f $ZDOTDIR/.p10k.zsh ] || source $ZDOTDIR/.p10k.zsh
 znap source romkatv/powerlevel10k
 
-# Aliases
-unalias run-help
+# Aliases and functions
 alias bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 alias cfg="git --git-dir $HOME/.config/cfg-sync/ --work-tree $HOME"
 alias cp='cp -iv'
@@ -101,4 +101,11 @@ alias cget=termux-clipboard-get
 alias cset=termux-clipboard-set
 alias vi=nvim
 alias ydl=yt-dlp
-alias ydla='ydl -P /sdcard/Music/YouTube -x -f ba/b'
+alias ydla='ydl -x -f ba/b'
+bman () {
+	man "$@" | col -bx | bat -pl man --theme=Monokai\ Extended
+}
+alias man=bman
+pup () {
+	pip install -U $(pip list -o --format=freeze | cut -d'=' -f1)
+}
