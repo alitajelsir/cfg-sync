@@ -107,5 +107,5 @@ bman () {
 }
 alias man=bman
 pup () {
-	pip install -U $(pip list -o --format=freeze | cut -d'=' -f1)
+	pip install -U $(pip list -o | awk 'NR>2 {print $1}')
 }
