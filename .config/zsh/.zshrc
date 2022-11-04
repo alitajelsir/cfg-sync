@@ -107,5 +107,5 @@ bman () {
 }
 alias man=bman
 pup () {
-	pip install --user -U $(pip list -o | awk 'NR>2 {print $1}')
+	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
 }
