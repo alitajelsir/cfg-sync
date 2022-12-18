@@ -71,22 +71,22 @@ Color=95,135,135
 Color=0,255,255
 
 [Color7]
-Color=238,238,238
+Color=228,228,228
 
 [Color7Faint]
-Color=228,228,228
+Color=208,208,208
 
 [Color7Intense]
-Color=255,255,255
-
-[Foreground]
 Color=238,238,238
 
-[ForegroundFaint]
+[Foreground]
 Color=228,228,228
 
+[ForegroundFaint]
+Color=208,208,208
+
 [ForegroundIntense]
-Color=255,255,255
+Color=238,238,238
 
 [General]
 Anchor=0.5,0.5
