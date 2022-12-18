@@ -4,7 +4,7 @@
 
 # Znap plugin manager
 [ -f $XDG_DATA_HOME/znap/zsh-snap/znap.zsh ] ||
-	git clone https://github.com/marlonrichert/zsh-snap.git $XDG_DATA_HOME/znap/zsh-snap/
+	git clone --depth 1 https://github.com/marlonrichert/zsh-snap.git $XDG_DATA_HOME/znap/zsh-snap/
 source $XDG_DATA_HOME/znap/zsh-snap/znap.zsh
 
 # Directories
