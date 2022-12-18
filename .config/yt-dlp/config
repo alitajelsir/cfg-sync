@@ -2,7 +2,7 @@
 --force-ipv4
 
 # Download options
---external-downloader aria2c
+--downloader aria2c
 
 # Filesystem options
 --paths $HOME/Videos/YouTube
