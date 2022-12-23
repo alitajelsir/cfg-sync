@@ -2,6 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=false
 ColorScheme=elegance
+DimmValue=60
 Font=FiraCode Nerd Font Mono,10,-1,5,53,0,0,0,0,0,Retina
 UseFontLineChararacters=true
 
@@ -11,12 +12,12 @@ UseCustomCursorColor=false
 
 [General]
 Command=/usr/bin/zsh
-DimWhenInactive=false
+DimWhenInactive=true
 Name=Elegance
 Parent=FALLBACK/
 TerminalCenter=false
-TerminalColumns=164
-TerminalRows=38
+TerminalColumns=110
+TerminalRows=28
 
 [Interaction Options]
 OpenLinksByDirectClickEnabled=false
