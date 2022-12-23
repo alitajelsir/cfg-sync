@@ -5,7 +5,7 @@
 --downloader aria2c
 
 # Filesystem options
---paths $HOME/Videos/YouTube
+--paths $HOME/Downloads/YT-DLP
 --output %(title)s.%(ext)s
 --output chapter:%(title)s/%(section_number)02d-%(section_title)s.%(ext)s
 --cookies-from-browser firefox
