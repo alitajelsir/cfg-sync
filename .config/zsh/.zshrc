@@ -98,14 +98,14 @@ alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_ind
 alias lchrg='systemctl start charge-limit.service'
 alias ls=exa
 alias mv='mv -iv'
-alias pvc='protonvpn-cli c --cc US'
+alias pvc='protonvpn-cli c -f'
 alias pvd='protonvpn-cli d'
 alias pvs='protonvpn-cli s'
 alias rm='rm -Iv'
 alias rsync='rsync -hP'
 alias sudo='sudo '
 alias ydl=yt-dlp
-alias ydla="ydl -P $HOME/Audio/YouTube -x -f ba/b"
+alias ydla="ydl -x -f ba/b"
 
 # Command not found handler
 command_not_found_handler() {
