@@ -1,5 +1,6 @@
 {
 	"aururl": "https://aur.archlinux.org",
+	"aurrpcurl": "",
 	"buildDir": "/home/ali/.cache/yay",
 	"editor": "",
 	"editorflags": "",
@@ -42,5 +43,5 @@
 	"batchinstall": true,
 	"singlelineresults": false,
 	"separatesources": true,
-	"version": "11.3.0"
+	"version": "11.3.1"
 }
