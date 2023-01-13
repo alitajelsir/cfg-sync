@@ -16,8 +16,8 @@ DimWhenInactive=true
 Name=Elegance
 Parent=FALLBACK/
 TerminalCenter=false
-TerminalColumns=110
-TerminalRows=28
+TerminalColumns=145
+TerminalRows=42
 
 [Interaction Options]
 OpenLinksByDirectClickEnabled=false
