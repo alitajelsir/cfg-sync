@@ -1,5 +1,5 @@
 # Plugins
-source $HOME/.config/zsh/.zplugins
+source $ZDOTDIR/.zplugins
 
 # Directories
 setopt AUTO_CD AUTO_PUSHD
@@ -42,4 +42,4 @@ setopt CORRECT INTERACTIVE_COMMENTS
 autoload -Uz run-help
 
 # Aliases and Functions
-source $HOME/.config/zsh/.zaliases
+source $ZDOTDIR/.zaliases
