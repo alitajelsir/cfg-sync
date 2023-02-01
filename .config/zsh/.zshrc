@@ -39,6 +39,7 @@ unsetopt EXTENDED_HISTORY
 setopt CORRECT INTERACTIVE_COMMENTS
 
 # Help command
+unalias run-help
 autoload -Uz run-help
 
 # Aliases and Functions
