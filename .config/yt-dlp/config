@@ -11,13 +11,12 @@
 --output chapter:%(title)s/%(section_number)02d-%(section_title)s.%(ext)s
 
 # Video format options
---format bestvideo+bestaudio/best
---format-sort vcodec:av01/vp9.2/vp9/h265/h264,acodec:flac/opus/vorbis/aac
+--format-sort vcodec:av01
 --merge-output-format mkv
 
 # Subtitle options
---sub-format vtt/ass/srt/best
---sub-lang en.*,ar
+--sub-format vtt
+--sub-lang ar.*,en.*
 
 # Post-processing options
 --embed-subs
