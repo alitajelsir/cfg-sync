@@ -7,14 +7,17 @@
 	git clone --depth 1 https://github.com/marlonrichert/zsh-snap.git $XDG_DATA_HOME/znap/zsh-snap
 source $XDG_DATA_HOME/znap/zsh-snap/znap.zsh
 
-# Autosuggestion
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-ZSH_AUTOSUGGEST_USE_ASYNC=true
-znap source zsh-users/zsh-autosuggestions
+# Completion
+znap source zsh-users/zsh-completions
 
 # Syntax Highlighting
 znap source zdharma-continuum/fast-syntax-highlighting
 fast-theme -s | grep -Foqm1 elegance || fast-theme -q XDG:elegance
+
+# Autosuggestion
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+znap source zsh-users/zsh-autosuggestions
 
 # Z Colors
 znap source marlonrichert/zcolors
