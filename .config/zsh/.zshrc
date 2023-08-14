@@ -1,6 +1,13 @@
 # Plugins
 source $ZDOTDIR/.zplugins
 
+# Aliases and Functions
+source $ZDOTDIR/.zaliases
+
+# Help command
+unalias run-help
+autoload -Uz run-help
+
 # Directories
 setopt AUTO_CD AUTO_PUSHD
 setopt CD_SILENT PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_SILENT PUSHD_TO_HOME
@@ -37,10 +44,3 @@ unsetopt EXTENDED_HISTORY
 
 # Input and Output
 setopt CORRECT INTERACTIVE_COMMENTS
-
-# Help command
-unalias run-help
-autoload -Uz run-help
-
-# Aliases and Functions
-source $ZDOTDIR/.zaliases
