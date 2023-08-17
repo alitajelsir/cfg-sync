@@ -25,14 +25,7 @@ bman() {
 }
 alias man=bman
 
-# Domains blocklist generator
-dnsblock () {
-	(cd ~/Extension/SDC/dnscrypt-proxy
-	python generate-domains-blocklist.py -o blocked-names.txt)
-}
-
 # User session pip packages updater
 pup () {
 	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
 }
-
