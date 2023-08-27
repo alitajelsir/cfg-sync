@@ -26,10 +26,6 @@
 # Syntax Highlighting
 fast-theme -s | grep -Foqm1 elegance || fast-theme -q XDG:elegance
 
-# Autosuggestion
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-ZSH_AUTOSUGGEST_USE_ASYNC=true
-
 # Z Colors
 znap eval zcolors zcolors
 
