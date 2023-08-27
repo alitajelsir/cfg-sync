@@ -15,9 +15,9 @@
 		marlonrichert/zsh-autocomplete
 		romkatv/powerlevel10k
 	)
-	
+
 	znap clone $plugins
-	
+
 	local p=
 	for p in $plugins; do
 		znap source $p
