@@ -7,4 +7,4 @@ path=($HOME/.local/bin $path)
 export FFMPEG_DATADIR=$XDG_CONFIG_HOME/ffmpeg
 export EDITOR=nvim
 export LESS="--tab=2 $LESS"
-export MANPATH=$HOME/.local/share/man:$MANPATH
+export MANPATH=$XDG_DATA_HOME/man:$MANPATH

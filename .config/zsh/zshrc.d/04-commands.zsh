@@ -1,29 +1,38 @@
-alias bh='col -bx | bat -pl help --theme=Monokai\ Extended'
-alias cfg="git --git-dir $HOME/.config/cfg-sync/ --work-tree $HOME"
-alias cp='cp -iv'
-alias exa='exa -aFb --group-directories-first --icons'
-alias fd='fd -uL'
-alias ffmpeg='ffmpeg -hide_banner'
-alias ffprobe='ffprobe -hide_banner'
-alias grep='grep --color=auto'
-alias help=run-help
-alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
-alias ls=exa
-alias mv='mv -iv'
-alias open=termux-open
-alias rm='rm -Iv'
-alias rsync='rsync -hP'
-alias cget=termux-clipboard-get
-alias cset=termux-clipboard-set
-alias vi=nvim
-alias ydl=yt-dlp
-alias ydla='ydl -x -f ba/b'
+() {
+	local -a commands=(
+		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
+		cfg="git --git-dir $HOME/.config/cfg-sync/ --work-tree $HOME"
+		cp='cp -iv'
+		exa='exa -aFb --group-directories-first --icons'
+		fd='fd -uL'
+		ffmpeg='ffmpeg -hide_banner'
+		ffprobe='ffprobe -hide_banner'
+		grep='grep --color=auto'
+		kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
+		ls=exa
+		mv='mv -iv'
+		open=termux-open
+		rm='rm -Iv'
+		rsync='rsync -hP'
+		cget=termux-clipboard-get
+		cset=termux-clipboard-set
+		vi=nvim
+		ydl=yt-dlp
+		ydla='ydl -x -f ba/b'
+	)
+	alias $commands
+}
 
 # Use bat to show man-db
 bman() {
 	man "$@" | col -bx | bat -pl man --theme=Monokai\ Extended
 }
 alias man=bman
+
+bhelp() {
+	run-help "$@" | col -bx | bat -pl man --theme=Monokai\ Extended
+}
+alias run-help=bhelp
 
 # User session pip packages updater
 pup () {
