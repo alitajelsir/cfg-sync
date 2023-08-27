@@ -1,26 +1,31 @@
+() {
+	local -a monikers=(
+		aria2c="aria2c --dir $HOME/Downloads"
+		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
+		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync --work-tree $HOME"
+		cp='cp -iv'
+		exa='exa -aFb --icons --group-directories-first'
+		fd='fd -u'
+		ffmpeg='ffmpeg -hide_banner'
+		ffprobe='ffprobe -hide_banner'
+		grep='grep --color=auto'
+		help=run-help
+		qsenc='ffmpeg -init_hw_device qsv=hw -filter_hw_device hw'
+		kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
+		ls=exa
+		mv='mv -iv'
+		pvc='protonvpn-cli c -f'
+		pvd='protonvpn-cli d'
+		pvs='protonvpn-cli s'
+		rm='rm -Iv'
+		rsync='rsync -hP'
+		sudo='sudo '
+		ydl=yt-dlp
+		ydla='ydl -x -f ba/b'
+	)
+	alias $monikers
+}
 alias -g '$= '
-alias aria2c="aria2c --dir $HOME/Downloads"
-alias bh='col -bx | bat -pl help --theme=Monokai\ Extended'
-alias cfg="git --git-dir $HOME/.config/cfg-sync --work-tree $HOME"
-alias cp='cp -iv'
-alias exa='exa -aFb --icons --group-directories-first'
-alias fd='fd -u'
-alias ffmpeg='ffmpeg -hide_banner'
-alias ffprobe='ffprobe -hide_banner'
-alias grep='grep --color=auto'
-alias help=run-help
-alias qsenc='ffmpeg -init_hw_device qsv=hw -filter_hw_device hw'
-alias kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
-alias ls=exa
-alias mv='mv -iv'
-alias pvc='protonvpn-cli c --cc US'
-alias pvd='protonvpn-cli d'
-alias pvs='protonvpn-cli s'
-alias rm='rm -Iv'
-alias rsync='rsync -hP'
-alias sudo='sudo '
-alias ydl=yt-dlp
-alias ydla="ydl -x -f ba/b"
 
 # Command not found handler
 command_not_found_handler() {
