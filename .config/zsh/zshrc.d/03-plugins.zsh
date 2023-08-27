@@ -18,6 +18,7 @@
 	
 	znap clone $plugins
 	
+	local p=
 	for p in $plugins; do
 		znap source $p
 	done
