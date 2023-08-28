@@ -15,9 +15,10 @@
 		marlonrichert/zsh-autocomplete
 		romkatv/powerlevel10k
 	)
-	
+
 	znap clone $plugins
-	
+
+	local p=
 	for p in $plugins; do
 		znap source $p
 	done
@@ -31,17 +32,12 @@ znap eval zcolors zcolors
 
 # Vim Mode
 MODE_CURSOR_VIINS="bar"
-MODE_CURSOR_REPLACE="underline"
-MODE_CURSOR_VICMD="block"
-MODE_CURSOR_SEARCH="underline"
 MODE_CURSOR_VISUAL="block"
-MODE_CURSOR_VLINE="block"
 
 # Completion
 zstyle ':completion:*:paths' path-completion yes
-zstyle -e ':autocomplete:list-choices:*' list-lines 'reply=( $(( LINES / 2 )) )'
-zstyle -e ':autocomplete:history-incremental-search-backward:*' list-lines 'reply=( $(( LINES / 2 )) )'
 zstyle ':autocomplete:history-search-backward:*' list-lines HISTSIZE
+
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
