@@ -12,11 +12,14 @@ if [ $? = 0 ]; then
 	echo 'Syncing completed successfully'
 	else
 		echo 'Backing up pre-existing files...'
+
 		cfg checkout 2>&1 |
 		grep -E "\s+\." | awk {'print $1'} | xargs -I'{}' \
 		rsync -ahR --remove-source-files '{}' $HOME/.config/cfg-bak
 		cfg checkout
+
 		echo 'Syncing completed successfully'
 fi
 
 cfg config --local status.showUntrackedFiles no
+exit
