@@ -13,7 +13,7 @@ autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert
 
 " Dictionary
-set dictionary+=$HOME/.config/nvim/en_US.dict
+set dictionary+=$XDG_CONFIG_HOME/nvim/en_US.dict
 
 " shortcuts
 noremap <A-/> :buffers<CR>:buffer<space>
