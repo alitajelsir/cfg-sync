@@ -15,7 +15,7 @@ autocmd TermOpen * startinsert
 " Dictionary
 set dictionary+=$XDG_CONFIG_HOME/nvim/en_US.dict
 
-" shortcuts
+" Shortcuts
 noremap <A-/> :buffers<CR>:buffer<space>
 noremap <A-.> :bnext<CR>
 noremap <A-,> :bprevious<CR>
@@ -25,5 +25,7 @@ vnoremap <C-x> "*d
 inoremap <C-v> <C-r><C-o>*
 
 noremap <C-s> :w<CR>
-noremap <C-A-s> :w<space>
 noremap <C-q> :q
+
+" Cursor
+:au VimLeave * set guicursor=a:ver25-blinkon0
