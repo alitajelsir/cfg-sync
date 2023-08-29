@@ -73,3 +73,13 @@
 	stash = normal dim
 	grafted = 1 normal italic
 	HEAD = 6 normal italic
+[maintenance]
+	repo = /home/ali/.local/share/znap/zsh-snap
+	repo = /home/ali/.local/share/znap/kutsan/zsh-system-clipboard
+	repo = /home/ali/.local/share/znap/marlonrichert/zcolors
+	repo = /home/ali/.local/share/znap/marlonrichert/zsh-autocomplete
+	repo = /home/ali/.local/share/znap/romkatv/powerlevel10k
+	repo = /home/ali/.local/share/znap/softmoth/zsh-vim-mode
+	repo = /home/ali/.local/share/znap/zdharma-continuum/fast-syntax-highlighting
+	repo = /home/ali/.local/share/znap/zsh-users/zsh-autosuggestions
+	repo = /home/ali/.local/share/znap/zsh-users/zsh-completions
