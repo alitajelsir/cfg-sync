@@ -30,3 +30,9 @@ HISTSIZE=$(( 1.2 * SAVEHIST ))
 # Help command
 unalias run-help
 autoload -Uz run-help
+
+# Emacs mode
+bindkey -e
+
+# Cursor
+printf '\e[6 q'
