@@ -1,7 +1,7 @@
 () {
 	local -a commands=(
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
-		cfg="git --git-dir $HOME/.config/cfg-sync/ --work-tree $HOME"
+		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync/ --work-tree $HOME"
 		cp='cp -iv'
 		exa='exa -aFb --group-directories-first --icons'
 		fd='fd -uL'
