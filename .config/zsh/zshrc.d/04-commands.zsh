@@ -1,5 +1,5 @@
 () {
-	local -a monikers=(
+	local -a zsh_aliases=(
 		aria2c="aria2c --dir $HOME/Downloads"
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync --work-tree $HOME"
@@ -23,7 +23,7 @@
 		ydl=yt-dlp
 		ydla='ydl -x -f ba/b'
 	)
-	alias $monikers
+	alias $zsh_aliases
 }
 alias -g '$= '
 
