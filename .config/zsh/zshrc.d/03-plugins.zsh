@@ -32,7 +32,6 @@ znap eval zcolors zcolors
 
 # Completion
 zstyle ':completion:*:paths' path-completion yes
-zstyle ':autocomplete:history-search-backward:*' list-lines HISTSIZE
 
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
