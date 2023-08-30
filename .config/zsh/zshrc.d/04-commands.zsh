@@ -1,6 +1,7 @@
 () {
-	local -a commands=(
+	local -a monikers=(
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
+		bm='col -bx | bat -pl man --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync/ --work-tree $HOME"
 		cp='cp -iv'
 		exa='exa -aFb --group-directories-first --icons'
@@ -20,21 +21,9 @@
 		ydl=yt-dlp
 		ydla='ydl -x -f ba/b'
 	)
-	alias $commands
+	alias $monikers
 }
 
-# Use bat to show man-db
-bman() {
-	man "$@" | col -bx | bat -pl man --theme=Monokai\ Extended
-}
-alias man=bman
-
-bhelp() {
-	run-help "$@" | col -bx | bat -pl man --theme=Monokai\ Extended
-}
-alias run-help=bhelp
-
-# User session pip packages updater
 pup () {
 	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
 }
