@@ -10,9 +10,9 @@
 		zsh-users/zsh-autosuggestions
 		marlonrichert/zcolors
 		kutsan/zsh-system-clipboard
-		softmoth/zsh-vim-mode
 		zsh-users/zsh-completions
 		marlonrichert/zsh-autocomplete
+		marlonrichert/zsh-edit
 		romkatv/powerlevel10k
 	)
 
@@ -29,10 +29,6 @@ fast-theme -s | grep -Foqm1 elegance || fast-theme -q XDG:elegance
 
 # Z Colors
 znap eval zcolors zcolors
-
-# Vim Mode
-MODE_CURSOR_VIINS="bar"
-MODE_CURSOR_VISUAL="block"
 
 # Completion
 zstyle ':completion:*:paths' path-completion yes
