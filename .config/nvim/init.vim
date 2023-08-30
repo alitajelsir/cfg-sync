@@ -24,8 +24,11 @@ vnoremap <C-c> "+y
 vnoremap <C-x> "+d
 inoremap <C-v> <C-r><C-o>+
 
+noremap <C-s> :w<CR>
+noremap <C-q> :q
+
 noremap <F7> :setlocal spell spelllang=en_us<CR>
 noremap <F19> :setlocal nospell<CR>
 
-noremap <C-s> :w<CR>
-noremap <C-q> :q
+" Cursor
+:au VimLeave * set guicursor=a:ver25-blinkon0
