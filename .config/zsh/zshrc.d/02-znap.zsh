@@ -7,4 +7,3 @@
 		git clone --depth 1 $znap_remote $znap_local
 	source $znap_local/znap.zsh
 }
-
