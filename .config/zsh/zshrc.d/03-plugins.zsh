@@ -6,14 +6,13 @@
 
 (){
 	local -a plugins=(
-		zdharma-continuum/fast-syntax-highlighting
-		zsh-users/zsh-autosuggestions
-		marlonrichert/zcolors
-		kutsan/zsh-system-clipboard
+		romkatv/powerlevel10k
 		zsh-users/zsh-completions
 		marlonrichert/zsh-autocomplete
+		marlonrichert/zcolors
+		zsh-users/zsh-autosuggestions
+		zdharma-continuum/fast-syntax-highlighting
 		marlonrichert/zsh-edit
-		romkatv/powerlevel10k
 	)
 
 	znap clone $plugins
