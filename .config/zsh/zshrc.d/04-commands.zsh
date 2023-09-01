@@ -1,5 +1,5 @@
 () {
-	local -a zsh_aliases=(
+	local -a commands=(
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		bm='col -bx | bat -pl man --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync/ --work-tree $HOME"
@@ -21,7 +21,7 @@
 		ydl=yt-dlp
 		ydla='ydl -x -f ba/b'
 	)
-	alias $zsh_aliases
+	alias $commands
 }
 
 pup () {
