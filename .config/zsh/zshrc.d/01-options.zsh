@@ -1,5 +1,5 @@
 () {
-	local -a zsh_options=(
+	local -a options=(
 		# Expansion and Globbing
 		EXTENDED_GLOB
 		GLOB_DOTS
@@ -18,7 +18,7 @@
 		CORRECT
 		INTERACTIVE_COMMENTS
 	)
-	setopt $zsh_options
+	setopt $options
 }
 unsetopt EXTENDED_HISTORY
 
