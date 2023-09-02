@@ -6,7 +6,7 @@ export XDG_STATE_HOME=$HOME/.local/state
 export EDITOR=nvim
 export FFMPEG_DATADIR=$XDG_CONFIG_HOME/ffmpeg
 export GIT_CONFIG_GLOBAL=$XDG_CONFIG_HOME/git/config
-export LESS="--tab=2 $LESS"
+export LESS="$LESS --tab=2"
 export MANPATH=:$PREFIX/share/man:$XDG_DATA_HOME/man
 export MANROFFOPT=-c
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
