@@ -32,9 +32,6 @@ znap eval zcolors zcolors
 # Completion
 zstyle ':completion:*:paths' path-completion yes
 
-bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
-bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
-
 # Powerlevel10k
 [[ ! -r $ZDOTDIR/.p10k.zsh ]] ||
 	source $ZDOTDIR/.p10k.zsh
