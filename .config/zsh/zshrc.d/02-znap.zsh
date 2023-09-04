@@ -1,5 +1,5 @@
 # Use znap to mange plugins
-# Set znap local and remote source
+# Set znap local and remote sources
 () {
 	local znap_local znap_remote
 		znap_local=$XDG_DATA_HOME/znap/zsh-snap

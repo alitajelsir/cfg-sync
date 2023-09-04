@@ -1,9 +1,8 @@
 # Configure aliases
 () {
-	# list aliases
+	# List aliases
 	local -a commands=(
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
-		bm='col -bx | bat -pl man --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync/ --work-tree $HOME"
 		cp='cp -iv'
 		exa='exa -aFb --group-directories-first --icons'
@@ -30,7 +29,11 @@
 alias -g -- --help='--help 2>&1 | col -bx | bat -pl help --theme=Monokai\ Extended'
 
 # Configure functions
+# Update python packages
 pup () {
-	# Update python packages
 	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
+}
+# eval MANPAGER
+man() {
+	command man "$@" | eval $MANPAGER
 }
