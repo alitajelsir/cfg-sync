@@ -1,7 +1,8 @@
+# Configure aliases
 () {
+	# List aliases
 	local -a commands=(
 		aria2c="aria2c --dir $HOME/Downloads"
-		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync --work-tree $HOME"
 		cp='cp -iv'
 		exa='exa -aFb --icons --group-directories-first'
@@ -23,10 +24,17 @@
 		ydl=yt-dlp
 		ydla='ydl -x -f ba/b'
 	)
+	
+	# Set aliases
 	alias $commands
 }
-alias -g '$= '
 
+# Set global aliases
+alias -g '$= '
+alias -g -- --help='--help 2>&1 | col -bx | bat -pl help --theme=Monokai\ Extended'
+
+
+# Configure functions
 # Command not found handler
 command_not_found_handler() {
 	local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
