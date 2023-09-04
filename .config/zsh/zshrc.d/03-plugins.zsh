@@ -19,10 +19,10 @@
 		zdharma-continuum/fast-syntax-highlighting
 		marlonrichert/zsh-edit
 	)
-	
+
 	# Clone plugins in parallel
 	znap clone $plugins
-	
+
 	# Source plugins one by one
 	local p=
 	for p in $plugins; do

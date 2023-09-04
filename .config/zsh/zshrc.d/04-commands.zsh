@@ -24,7 +24,7 @@
 		ydl=yt-dlp
 		ydla='ydl -x -f ba/b'
 	)
-	
+
 	# Set aliases
 	alias $commands
 }
