@@ -1,4 +1,6 @@
+# Configure aliases
 () {
+	# list aliases
 	local -a commands=(
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		bm='col -bx | bat -pl man --theme=Monokai\ Extended'
@@ -21,9 +23,14 @@
 		ydl=yt-dlp
 		ydla='ydl -x -f ba/b'
 	)
+	# Set aliases
 	alias $commands
 }
+# Set global aliases
+alias -g -- --help='--help 2>&1 | col -bx | bat -pl help --theme=Monokai\ Extended'
 
+# Configure functions
 pup () {
+	# Update python packages
 	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
 }

@@ -1,4 +1,6 @@
+# Configure options
 () {
+	# List options	
 	local -a options=(
 		# Expansion and Globbing
 		EXTENDED_GLOB
@@ -18,8 +20,10 @@
 		CORRECT
 		INTERACTIVE_COMMENTS
 	)
+	# Set options
 	setopt $options
 }
+# No timestamps in history
 unsetopt EXTENDED_HISTORY
 
 # History File
