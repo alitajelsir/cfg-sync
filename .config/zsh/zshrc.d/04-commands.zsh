@@ -22,17 +22,21 @@
 		ydl=yt-dlp
 		ydla='ydl -x -f ba/b'
 	)
+
 	# Set aliases
 	alias $commands
 }
+
 # Set global aliases
 alias -g -- --help='--help 2>&1 | col -bx | bat -pl help --theme=Monokai\ Extended'
+
 
 # Configure functions
 # Update python packages
 pup () {
 	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
 }
+
 # eval MANPAGER
 man() {
 	command man "$@" | eval $MANPAGER

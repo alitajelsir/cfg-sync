@@ -7,6 +7,7 @@
 		GLOB_DOTS
 		GLOB_STAR_SHORT
 		NUMERIC_GLOB_SORT
+
 		# History
 		HIST_FCNTL_LOCK
 		HIST_IGNORE_ALL_DUPS
@@ -16,13 +17,16 @@
 		HIST_REDUCE_BLANKS
 		HIST_VERIFY
 		INC_APPEND_HISTORY
+
 		# Input and Output
 		CORRECT
 		INTERACTIVE_COMMENTS
 	)
+
 	# Set options
 	setopt $options
 }
+
 # No timestamps in history
 unsetopt EXTENDED_HISTORY
 
