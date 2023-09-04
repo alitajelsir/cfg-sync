@@ -15,5 +15,5 @@ export SSH_ASKPASS=/usr/bin/ksshaskpass
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 export VISUAL=nvim
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
-[ $XDG_SESSION_TYPE != wayland ] ||
+[ "$XDG_SESSION_TYPE" != "wayland" ] ||
 	export MOZ_ENABLE_WAYLAND=1
