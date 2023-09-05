@@ -27,7 +27,7 @@ fi
 
 cfg config --local status.showUntrackedFiles no
 
-ln -sf .config/profile.d/env-vars.sh $PREFIX/etc/profile.d
+ln -sf $HOME/.config/profile.d/env-vars.sh $PREFIX/etc/profile.d
 
 chsh -s zsh
 
