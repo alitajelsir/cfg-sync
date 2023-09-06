@@ -7,7 +7,7 @@ export EDITOR=nvim
 export FFMPEG_DATADIR=$XDG_CONFIG_HOME/ffmpeg
 export GIT_CONFIG_GLOBAL=$XDG_CONFIG_HOME/git/config
 export GTK_USE_PORTAL=1
-export LESS="$LESS --tabs 2"
+export LESS="$LESS -x2RF"
 export LIBVA_DRIVER_NAME=iHD
 export MANPAGER="sh -c 'col -bx | bat -pl man --theme=Monokai\ Extended'"
 export MANROFFOPT=-c
