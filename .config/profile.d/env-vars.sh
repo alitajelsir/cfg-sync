@@ -12,6 +12,7 @@ export LIBVA_DRIVER_NAME=iHD
 export MANPAGER="sh -c 'col -bx | bat -pl man --theme=Monokai\ Extended'"
 export MANROFFOPT=-c
 export SSH_ASKPASS=/usr/bin/ksshaskpass
+export SSH_ASKPASS_REQUIRE=prefer
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 export VISUAL=nvim
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
