@@ -1,8 +1,6 @@
 [user]
 	name = Ali Tajelsir
 	email = alitajelsir@gmail.com
-[core]
-	pager = less -R
 [diff]
 	tool = meld
 	colorMoved = zebra
