@@ -1,8 +1,6 @@
 [user]
 	email = alitajelsir@gmail.com
 	name = Ali Tajelsir
-[core]
-	pager = less -R
 [alias]
 	cm = commit -m
 	ss = status -sb
