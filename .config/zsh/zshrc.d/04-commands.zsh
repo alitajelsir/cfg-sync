@@ -37,7 +37,7 @@ pup () {
 	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
 }
 
-# eval MANPAGER
+# Colorize manpages
 man() {
-	command man "$@" | eval $MANPAGER
+	command man "$@" | col -bx | bat -pl man --theme=Monokai\ Extended
 }
