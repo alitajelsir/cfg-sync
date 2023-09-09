@@ -14,6 +14,7 @@
 	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
 [alias]
 	cm = commit -m
+	ls = log --compact-summary --shortstat
 	ss = status -sb
 [color "status"]
 	branch = 6 normal
