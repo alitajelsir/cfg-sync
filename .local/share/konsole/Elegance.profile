@@ -1,6 +1,6 @@
 [Appearance]
 AntiAliasFonts=true
-BoldIntense=false
+BoldIntense=true
 ColorScheme=elegance
 DimmValue=60
 Font=FiraCode Nerd Font Mono,10,-1,5,53,0,0,0,0,0,Retina
