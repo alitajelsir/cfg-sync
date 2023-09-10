@@ -6,7 +6,7 @@
 		aria2c="aria2c --dir $HOME/Downloads"
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync --work-tree $HOME"
 		cp='cp -iv'
-		exa='exa -aFb --icons --group-directories-first'
+		eza='eza -abF --icons --group-directories-first'
 		fd='fd -u'
 		ffmpeg='ffmpeg -hide_banner'
 		ffprobe='ffprobe -hide_banner'
@@ -14,6 +14,7 @@
 		help=run-help
 		qsenc='ffmpeg -init_hw_device qsv=hw -filter_hw_device hw'
 		kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
+		ls='ls -AFhv --color=auto --group-directories-first'
 		mv='mv -iv'
 		pvc='protonvpn-cli c -f'
 		pvd='protonvpn-cli d'
