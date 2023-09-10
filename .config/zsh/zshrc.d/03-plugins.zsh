@@ -10,6 +10,7 @@
 
 # Install plugins
 (){
+
 	# List plugins
 	local -a plugins=(
 		romkatv/powerlevel10k

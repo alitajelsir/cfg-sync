@@ -1,7 +1,9 @@
 # Configure options
 () {
+
 	# List options	
 	local -a options=(
+
 		# Expansion and Globbing
 		EXTENDED_GLOB
 		GLOB_DOTS
