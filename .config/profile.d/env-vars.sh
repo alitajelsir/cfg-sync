@@ -7,9 +7,10 @@ export CUDA_CACHE_PATH=$XDG_CACHE_HOME/nvidia
 export EDITOR=nvim
 export FFMPEG_DATADIR=$XDG_CONFIG_HOME/ffmpeg
 export GIT_CONFIG_GLOBAL=$XDG_CONFIG_HOME/git/config
+export GNUPGHOME=$XDG_DATA_HOME/gnupg
+export GREP_COLORS='mt=30;103'
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/settings.ini
 export GTK_USE_PORTAL=1
-export GREP_COLORS='mt=30;103'
 export LESS="$LESS -x2RF"
 export LIBVA_DRIVER_NAME=iHD
 export MANPAGER="sh -c 'col -bx | bat -pl man --theme=Monokai\ Extended'"
