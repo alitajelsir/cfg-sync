@@ -1,4 +1,4 @@
-" Enable mouse support in all modes 
+" Enable mouse support in all modes
 set mouse=a
 
 
