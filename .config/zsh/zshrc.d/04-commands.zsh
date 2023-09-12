@@ -3,9 +3,14 @@
 
 	# List aliases
 	local -a commands=(
+		%=
+		-='cd -'
+		\$=
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync/ --work-tree $HOME"
+		cget=termux-clipboard-get
 		cp='cp -iv'
+		cset=termux-clipboard-set
 		exa='exa -abF --group-directories-first --icons'
 		fd='fd -uL'
 		ffmpeg='ffmpeg -hide_banner'
@@ -17,15 +22,13 @@
 		open=termux-open
 		rm='rm -Iv'
 		rsync='rsync -hP'
-		cget=termux-clipboard-get
-		cset=termux-clipboard-set
 		vi=nvim
 		ydl=yt-dlp
-		ydla='ydl -x -f ba/b'
+		ydla='yt-dlp -x -f ba/b'
 	)
 
 	# Set aliases
-	alias $commands
+	alias -- $commands
 }
 
 # Set global aliases
