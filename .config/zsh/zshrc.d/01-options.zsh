@@ -3,6 +3,8 @@
 
 	# List options	
 	local -a options=(
+		# Changing Directories
+		AUTO_CD
 
 		# Expansion and Globbing
 		EXTENDED_GLOB
