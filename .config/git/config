@@ -1,6 +1,6 @@
 [alias]
 	cm = commit -m
-	ls = log --compact-summary --shortstat
+	ls = log --abbrev-commit --compact-summary --shortstat
 	ss = status -sb
 [color "branch"]
 	plain = 6 normal
