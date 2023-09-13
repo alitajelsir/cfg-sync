@@ -20,6 +20,7 @@
 		ls='ls -AFhv --color=auto --group-directories-first'
 		mv='mv -iv'
 		open=termux-open
+		plg="cd $(mktemp -d)"
 		rm='rm -Iv'
 		rsync='rsync -hP'
 		vi=nvim
