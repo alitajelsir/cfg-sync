@@ -1,0 +1,4 @@
+--italic-text=always
+--style=header-filename,rule
+--tabs=2
+--theme=Dracula
