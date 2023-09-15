@@ -44,7 +44,3 @@ noremap <F19> :setlocal nospell<CR>
 " Save and quit
 noremap <C-s> :write<CR>
 noremap <C-q> :quit
-
-
-" Restore bar cursor on exit
-autocmd VimLeave * set guicursor=a:ver25-blinkon0
