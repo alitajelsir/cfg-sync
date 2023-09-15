@@ -47,4 +47,5 @@ autoload -Uz run-help
 bindkey -e
 
 # Cursor
-printf '\e[6 q'
+cursor_shape() { printf '\e[6 q' }
+precmd_functions+=(cursor_shape)
