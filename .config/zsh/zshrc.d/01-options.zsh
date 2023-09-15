@@ -31,21 +31,17 @@
 	setopt $options
 }
 
-# No timestamps in history
+# Do not use timestamps in history
 unsetopt EXTENDED_HISTORY
 
-# History File
+# Configure history file
 HISTFILE=$ZDOTDIR/.zhistory
-SAVEHIST=1000
+SAVEHIST=$(( 10 * 1000 ))
 HISTSIZE=$(( 1.2 * SAVEHIST ))
 
-# Help command
+# Access on-line help
 unalias run-help
 autoload -Uz run-help
 
-# Emacs mode
+# Use emacs mode
 bindkey -e
-
-# Cursor
-cursor_shape() { printf '\e[6 q' }
-precmd_functions+=(cursor_shape)
