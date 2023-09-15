@@ -31,8 +31,6 @@
 	setopt $options
 }
 
-# Do not use timestamps in history
-unsetopt EXTENDED_HISTORY
 
 # Configure history file
 HISTFILE=$ZDOTDIR/.zhistory
