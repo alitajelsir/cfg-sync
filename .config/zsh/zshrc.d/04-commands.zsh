@@ -38,7 +38,7 @@ alias -g -- --help='--help 2>&1 | col -bx | bat -pl help --theme=Monokai\ Extend
 
 # Configure functions
 # Update python packages
-pup () {
+pup() {
 	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
 }
 
