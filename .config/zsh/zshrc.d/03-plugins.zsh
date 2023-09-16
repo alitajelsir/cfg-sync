@@ -13,7 +13,7 @@ precmd_functions+=(_cursor_bar)
 
 
 # Install plugins
-(){
+() {
 
 	# List plugins
 	local -a plugins=(
