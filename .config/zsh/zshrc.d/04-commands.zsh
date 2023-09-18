@@ -53,7 +53,7 @@ command_not_found_handler() {
 		local pkg
 		for entry in $entries; do
 			local fields=(${(0)entry})
-			[[ $pkg = $fields[2] ]] ||
+			[[ $pkg == $fields[2] ]] ||
 				printf "$magenta%s/$bright%s $green%s$reset\n" $fields[1] $fields[2] $fields[3]
 			printf '  /%s\n' $fields[4]
 			pkg=$fields[2]
