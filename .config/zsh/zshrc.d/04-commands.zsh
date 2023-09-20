@@ -4,9 +4,10 @@
 	# List aliases
 	local -a commands=(
 		%=
+		-='cd -'
 		\$=
 		aria2c="aria2c --dir $HOME/Downloads"
-		-='cd -'
+		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync --work-tree $HOME"
 		cp='cp -iv'
 		eza='eza -abF --icons --group-directories-first'
@@ -26,8 +27,8 @@
 		rm='rm -Iv'
 		rsync='rsync -hP'
 		sudo='sudo '
-		ydla='yt-dlp -x -f ba/b'
 		ydl=yt-dlp
+		ydla='yt-dlp -x -f ba/b'
 	)
 
 	# Set aliases
@@ -36,7 +37,6 @@
 
 # Set global aliases
 alias -g '$= '
-alias -g -- --help='--help 2>&1 | col -bx | bat -pl help --theme=Monokai\ Extended'
 
 
 # Configure functions
