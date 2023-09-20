@@ -32,9 +32,6 @@
 	alias -- $commands
 }
 
-# Set global aliases
-alias -g -- --help='--help 2>&1 | col -bx | bat -pl help --theme=Monokai\ Extended'
-
 
 # Configure functions
 # Update python packages
