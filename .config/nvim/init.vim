@@ -21,7 +21,7 @@ set tabstop=2 shiftwidth=2
 
 
 " Set dictionary path
-set dictionary+=/usr/share/dict/words
+set dictionary+=$XDG_DATA_HOME/nvim/en_US.dict
 
 
 " Open file explorer
