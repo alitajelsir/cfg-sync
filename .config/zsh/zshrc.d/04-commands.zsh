@@ -34,12 +34,15 @@
 
 
 # Configure functions
-# Update python packages
+# Upgrade all pip installed packages
 pup() {
-	pip install --user -U $(pip list --user -o | awk 'NR>2 {print $1}')
+	local -a outdated=($(pip list --user --outdated | awk 'NR>2 {print $1}'))
+	[[ -z $outdated ]] ||
+		pip install --user --upgrade $outdated
 }
 
 # Colorize manpages
 man() {
-	command man "$@" | col -bx | bat -pl man --theme=Monokai\ Extended
+	command man "$@" | col --no-backspaces --spaces |
+	bat --plain --language=man --theme=Monokai\ Extended
 }
