@@ -59,7 +59,7 @@ tbak() {
 		mkdir -p $dest
 
 	tar --use-compress-program='xz -T0 -0' \
-		--create --file $dest/termux_$ver.bak.tar.xz \
+		--create --file=$dest/termux_$ver.bak.tar.xz \
 		--directory=$src \
 		files
 }
