@@ -50,12 +50,16 @@ pup() {
 # Backup termux files
 tbak() {
 	local dest src ver
-	dest=/sdcard/Extension/Backup/Apps
-	src=/data/data/com.termux
-	ver=$(date +%Y%m%d)
+		dest=/sdcard/Extension/Backup/Apps
+		src=/data/data/com.termux
+		ver=$(date +%Y%m%d)
 
 	echo "Creating backup in $dest..."
 	[[ -d $dest ]] ||
 		mkdir -p $dest
-	tar -C $src --create --verify --file $dest/termux_$ver.bak.tar.xz files
+
+	tar --directory=$src \
+		--use-compress-program='xz -T0 -0' \
+		--create --file $dest/termux_$ver.bak.tar.xz \
+		files
 }
