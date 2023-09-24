@@ -58,8 +58,8 @@ tbak() {
 	[[ -d $dest ]] ||
 		mkdir -p $dest
 
-	tar --directory=$src \
-		--use-compress-program='xz -T0 -0' \
+	tar --use-compress-program='xz -T0 -0' \
 		--create --file $dest/termux_$ver.bak.tar.xz \
+		--directory=$src \
 		files
 }
