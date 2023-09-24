@@ -52,7 +52,7 @@ tbak() {
 	local dest src ver
 	dest=/sdcard/Extension/Backup/Apps
 	src=/data/data/com.termux
-	ver="$(date +%Y%m%d)"
+	ver=$(date +%Y%m%d)
 
 	echo "Creating backup in $dest..."
 	[[ -d $dest ]] ||
