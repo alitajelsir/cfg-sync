@@ -10,6 +10,7 @@ export GIT_CONFIG_GLOBAL=$XDG_CONFIG_HOME/git/config
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/settings.ini
 export GTK_USE_PORTAL=1
+export LC_COLLATE=C.UTF-8
 export LESS="$LESS -x2RF"
 export LIBVA_DRIVER_NAME=iHD
 export MANPAGER="sh -c 'col -bx | bat -pl man --theme=Monokai\ Extended'"
