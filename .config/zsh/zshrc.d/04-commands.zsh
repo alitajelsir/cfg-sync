@@ -29,6 +29,7 @@
 		sudo='sudo '
 		ydl=yt-dlp
 		ydla='yt-dlp -x -f ba/b'
+		❯=
 	)
 
 	# Set aliases
