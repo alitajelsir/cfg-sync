@@ -3,9 +3,8 @@
 
 	# List aliases
 	local -a commands=(
-		%=
+		%= \$= ❯=
 		-='cd -'
-		\$=
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync/ --work-tree $HOME"
 		cget=termux-clipboard-get
