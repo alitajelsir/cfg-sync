@@ -15,7 +15,6 @@
 		ffmpeg='ffmpeg -hide_banner'
 		ffprobe='ffprobe -hide_banner'
 		grep='grep --color=auto'
-		kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 		ls='ls -AFhv --color=auto --group-directories-first'
 		mv='mv -iv'
 		open=termux-open
