@@ -2,7 +2,6 @@
 --force-ipv4
 
 # Download options
---concurrent-fragments 5
 --downloader aria2c
 
 # Filesystem options
