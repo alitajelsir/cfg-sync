@@ -3,9 +3,8 @@
 
 	# List aliases
 	local -a commands=(
-		%=
+		%= \$= ❯=
 		-='cd -'
-		\$=
 		aria2c="aria2c --dir $HOME/Downloads"
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync --work-tree $HOME"
@@ -29,7 +28,6 @@
 		sudo='sudo '
 		ydl=yt-dlp
 		ydla='yt-dlp -x -f ba/b'
-		❯=
 	)
 
 	# Set aliases
