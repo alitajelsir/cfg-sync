@@ -15,7 +15,6 @@
 		ffprobe='ffprobe -hide_banner'
 		grep='grep --color=auto'
 		help=run-help
-		kudl="ydl -o '%(playlist)s/%(chapter_number)02d-%(chapter)s/%(playlist_index)02d-%(title)s.%(ext)s'"
 		ls='ls -AFhv --color=auto --group-directories-first'
 		mv='mv -iv'
 		plg="cd $(mktemp -d)"
