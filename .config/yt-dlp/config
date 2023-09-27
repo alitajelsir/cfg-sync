@@ -16,7 +16,7 @@
 
 # Subtitle options
 --sub-format vtt
---sub-lang ar,en.*
+--sub-lang ar.*,en.*
 
 # Post-processing options
 --embed-subs
