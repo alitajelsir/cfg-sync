@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+# Domains blocklist generator
+local dnsblock_gen dnscrypt_local dnscrypt_remote
+	dnsblock_gen=utils/generate-domains-blocklist
+	dnscrypt_local=$HOME/Extension/Git/dnscrypt-proxy
+	dnscrypt_remote=https://github.com/DNSCrypt/dnscrypt-proxy.git
+
+if [[ ! -r $dnscrypt_local/$dnsblock_gen/generate-domains-blocklist.py ]]; then
+	git clone --no-checkout --depth 1 --filter=tree:0 $dnscrypt_remote $dnscrypt_local
+	git -C $dnscrypt_local sparse-checkout set --no-cone $dnsblock_gen
+	git -C $dnscrypt_local checkout
+fi
+
+builtin cd $dnscrypt_local/$dnsblock_gen
+./generate-domains-blocklist.py \
+	-c $XDG_CONFIG_HOME/dnscrypt-proxy/domains-blocklist.conf \
+	-o /sdcard/dnscrypt-proxy/blocked-names.txt
+exit
