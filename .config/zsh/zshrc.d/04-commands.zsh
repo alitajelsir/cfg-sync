@@ -10,7 +10,7 @@
 		cget=termux-clipboard-get
 		cp='cp -iv'
 		cset=termux-clipboard-set
-		exa='exa -abF --group-directories-first --icons'
+		eza='eza -abF --group-directories-first --icons'
 		fd='fd -uL'
 		ffmpeg='ffmpeg -hide_banner'
 		ffprobe='ffprobe -hide_banner'
