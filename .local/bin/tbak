@@ -1,16 +1,21 @@
 #!/usr/bin/env zsh
 # Backup termux files
 local dest src ver
-	dest=/sdcard/Extension/Backup/Apps
-	src=/data/data/com.termux
+	dest=/sdcard/Backup/Apps
+	src=/data/data/com.termux/files
 	ver=$(date +%Y%m%d)
 
 echo "Creating backup in $dest..."
 [[ -d $dest ]] ||
 	mkdir -p $dest
 
-tar --use-compress-program='xz -T0 -0' \
-	--create --file=$dest/termux_$ver.bak.tar.xz \
-	--directory=$src \
-	files
+local -a tar_opts=(
+	--use-compress-program='xz --threads=0 -0'
+	--warning='no-file-ignored'
+	--create --file=$dest/termux_$ver.bak.tar.xz
+	--directory=$src
+	home usr
+)
+tar $tar_opts
+
 exit
