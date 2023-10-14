@@ -3,7 +3,7 @@
 local git_dir git_url utils_dir
 	git_dir=$HOME/Git/dnscrypt-proxy
 	git_url=https://github.com/DNSCrypt/dnscrypt-proxy.git
-	utils_dir=utils_dirs/generate-domains-blocklist
+	utils_dir=utils/generate-domains-blocklist
 
 if [[ ! -r $git_dir/$utils_dir/generate-domains-blocklist.py ]]; then
 	git clone --no-checkout --depth 1 --filter=tree:0 $git_url $git_dir
@@ -18,7 +18,7 @@ local config_dir=$XDG_CONFIG_HOME/dnscrypt-proxy
 
 local -a block_opts=(
 	--config $config_dir/domains-blocklist.conf
-	--allowlist $config_dir/domains-blocklist.conf
+	--allowlist $config_dir/domains-allowlist.txt
 	--time-restricted $git_dir/$utils_dir/domains-time-restricted.txt
 	--output-file /sdcard/dnscrypt-proxy/blocked-names.txt
 )
