@@ -12,7 +12,7 @@ if [[ ! -r $git_dir/$utils_dir/generate-domains-blocklist.py ]]; then
 fi
 
 local config_dir=$XDG_CONFIG_HOME/dnscrypt-proxy
-[[ -r $config_dir/domains-allowlist.txt ]] ||
+[[ -s $config_dir/domains-allowlist.txt ]] ||
 	sed '/^t/i t.co' $git_dir/$utils_dir/domains-allowlist.txt > \
 	$config_dir/domains-allowlist.txt
 
