@@ -35,31 +35,3 @@
 
 # Set global aliases
 alias -g '$= '
-
-
-# Configure functions
-# Command not found handler
-command_not_found_handler() {
-	local -a entries=(${(f)"$(pacman -F --machinereadable -- /usr/bin/$1)"})
-	local red='\e[1;31m' green='\e[1;32m' magenta='\e[1;35m' bright='\e[0;1m' reset='\e[0m'
-
-	printf "zsh: command not found: $red$1$reset\n" $1
-
-	if (( $#entries )); then
-		printf "$bright$1$reset may be found in the following package(s):\n"
-
-		local pkg
-		for entry in $entries; do
-			local fields=(${(0)entry})
-			[[ $pkg == $fields[2] ]] ||
-				printf "$magenta%s/$bright%s $green%s$reset\n" $fields[1] $fields[2] $fields[3]
-			printf '  /%s\n' $fields[4]
-			pkg=$fields[2]
-		done
-	fi 1>&2
-
-	return 127
-}
-
-# Trap SIGUSR1 and rehash
-TRAPUSR1() { rehash }
