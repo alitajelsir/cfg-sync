@@ -13,15 +13,13 @@
 		fd='fd -u'
 		ffmpeg='ffmpeg -hide_banner'
 		ffprobe='ffprobe -hide_banner'
-		grep='grep --color=auto'
 		help=run-help
-		ls='ls -AFhv --color=auto --group-directories-first'
+		ls=eza
 		mv='mv -iv'
 		plg="cd $(mktemp -d)"
 		pvc='protonvpn-cli c -f'
 		pvd='protonvpn-cli d'
 		pvs='protonvpn-cli s'
-		qsenc='ffmpeg -init_hw_device qsv=hw -filter_hw_device hw'
 		rm='rm -Iv'
 		rsync='rsync -hP'
 		sudo='sudo '
