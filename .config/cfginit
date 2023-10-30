@@ -5,7 +5,7 @@ apt install --no-install-recommends install git rsync zsh -y
 echo 'Syncing $HOME configurations...'
 
 git clone --depth 1 --quiet --bare --single-branch --branch termux \
-https://github.com/alitajelsir/config-sync.git $HOME/.config/cfg-sync
+https://github.com/alitajelsir/cfg-sync.git $HOME/.config/cfg-sync
 
 cfg () {
 	/usr/bin/git --git-dir=$HOME/.config/cfg-sync --work-tree=$HOME $@
