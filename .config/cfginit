@@ -28,7 +28,7 @@ fi
 cfg config --local status.showUntrackedFiles no
 
 cp ~/.config/profile.d/{01..04}-*.sh $PREFIX/etc/profile.d
-ln -sf ~/.config/profile.d/05-applications.sh $PREFIX/etc/profile.d
+ln -sf ~/.config/profile.d/*-applications.sh $PREFIX/etc/profile.d
 
 chsh -s zsh
 
