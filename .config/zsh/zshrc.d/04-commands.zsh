@@ -14,8 +14,7 @@
 		fd='fd -uL'
 		ffmpeg='ffmpeg -hide_banner'
 		ffprobe='ffprobe -hide_banner'
-		grep='grep --color=auto'
-		ls='ls -AFhv --color=auto --group-directories-first'
+		ls=eza
 		mv='mv -iv'
 		open=termux-open
 		plg="cd $(mktemp -d)"
