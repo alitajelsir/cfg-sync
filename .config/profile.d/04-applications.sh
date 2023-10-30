@@ -1,13 +1,6 @@
-export PATH=$PATH:$HOME/.local/bin
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_STATE_HOME=$HOME/.local/state
 export EDITOR=nvim
 export FFMPEG_DATADIR=$XDG_CONFIG_HOME/ffmpeg
 export GIT_CONFIG_GLOBAL=$XDG_CONFIG_HOME/git/config
-export LC_COLLATE=C.UTF-8
-export LC_CTYPE=en_US.UTF-8
 export LESS="$LESS -x2RF"
 export MANPATH=:$PREFIX/share/man:$XDG_DATA_HOME/man
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/rg/config
