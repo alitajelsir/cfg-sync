@@ -1,6 +1,6 @@
 echo 'Installing needed packages...'
 
-apt install --no-install-recommends install git rsync zsh -y
+apt install --no-install-recommends git rsync zsh -y
 
 echo 'Syncing $HOME configurations...'
 
