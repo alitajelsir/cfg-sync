@@ -27,7 +27,8 @@ fi
 
 cfg config --local status.showUntrackedFiles no
 
-rsync $HOME/.config/profile.d/ $PREFIX/etc/profile.d
+cp ~/.config/profile.d/{01..04}-*.sh $PREFIX/etc/profile.d
+ln -sf ~/.config/profile.d/05-applications.sh $PREFIX/etc/profile.d
 
 chsh -s zsh
 
