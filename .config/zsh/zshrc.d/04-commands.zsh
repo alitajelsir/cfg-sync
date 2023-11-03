@@ -19,7 +19,7 @@
 		open=termux-open
 		plg="cd $(mktemp -d)"
 		rm='rm -Iv'
-		rsync='rsync -hP'
+		rsync='rsync -P'
 		vi=nvim
 		ydl=yt-dlp
 		ydla='yt-dlp -x -f ba/b'
