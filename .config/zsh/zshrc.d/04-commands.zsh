@@ -21,7 +21,7 @@
 		pvd='protonvpn-cli d'
 		pvs='protonvpn-cli s'
 		rm='rm -Iv'
-		rsync='rsync -hP'
+		rsync='rsync -P'
 		sudo='sudo '
 		ydl=yt-dlp
 		ydla='yt-dlp -x -f ba/b'
