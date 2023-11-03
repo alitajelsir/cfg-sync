@@ -15,7 +15,7 @@ if [ $? = 0 ]; then
 
 		cfg checkout 2>&1 |
 		grep -E "\s+\." | awk {'print $1'} | xargs -I'{}' \
-		rsync -ahR --remove-source-files '{}' $HOME/.config/cfg-bak
+		rsync -aR --remove-source-files '{}' $HOME/.config/cfg-bak
 		cfg checkout
 
 		echo 'Syncing completed successfully'
