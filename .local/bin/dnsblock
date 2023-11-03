@@ -13,9 +13,9 @@ if [[ ! -r $git_dir/$utils_dir/generate-domains-blocklist.py ]]; then
 	git -C $git_dir checkout
 fi
 
-[[ -s $config_dir/domains-allowlist.txt ]] ||
-	sed '/^t/i t.co' $git_dir/$utils_dir/domains-allowlist.txt > \
-	$config_dir/domains-allowlist.txt
+grep -Fwoqm1 't.co' $config_dir/domains-allowlist.txt ||
+	sed '/^t/i t.co' $git_dir/$utils_dir/domains-allowlist.txt \
+	> $config_dir/domains-allowlist.txt
 
 local -a block_opts=(
 	--config $config_dir/domains-blocklist.conf
