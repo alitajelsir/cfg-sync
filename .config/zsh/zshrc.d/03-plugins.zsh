@@ -40,6 +40,9 @@ precmd_functions+=(_cursor_bar)
 # Allow path completion
 zstyle ':completion:*:paths' path-completion yes
 
+# Disable grouping matches
+zstyle ':completion:*' list-grouped false
+
 # Cache zcolor output
 znap eval zcolors zcolors
 
