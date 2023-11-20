@@ -5,13 +5,15 @@
 --downloader aria2c
 
 # Filesystem options
---paths $HOME/Downloads/YT-DLP
+--paths $HOME/Videos/yt-dlp
 --output %(title)s.%(ext)s
 --output chapter:%(title)s/%(section_number)02d-%(section_title)s.%(ext)s
+--continue
 --cookies-from-browser firefox
 
 # Video format options
---format-sort vcodec:av01
+#--format-sort vcodec:av01
+--format-sort hdr:sdr
 --merge-output-format mkv
 
 # Subtitle options
