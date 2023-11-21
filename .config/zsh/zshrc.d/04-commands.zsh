@@ -15,6 +15,8 @@
 		ffprobe='ffprobe -hide_banner'
 		help=run-help
 		ls=eza
+		mdl=yt-dlp
+		mdla='yt-dlp -x -f ba/b'
 		mv='mv -iv'
 		plg="cd $(mktemp -d)"
 		pvc='protonvpn-cli c -f'
@@ -23,8 +25,6 @@
 		rm='rm -Iv'
 		rsync='rsync -P'
 		sudo='sudo '
-		ydl=yt-dlp
-		ydla='yt-dlp -x -f ba/b'
 	)
 
 	# Set aliases
