@@ -21,8 +21,8 @@
 		rm='rm -Iv'
 		rsync='rsync -P'
 		vi=nvim
-		ydl=yt-dlp
-		ydla='yt-dlp -x -f ba/b'
+		mdl=yt-dlp
+		mdla='yt-dlp -x -f ba/b'
 	)
 
 	# Set aliases
