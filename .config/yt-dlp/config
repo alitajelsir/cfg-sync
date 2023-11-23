@@ -22,4 +22,5 @@
 # Post-processing options
 --embed-subs
 --embed-thumbnail
+--convert-thumbnails png
 --add-metadata
