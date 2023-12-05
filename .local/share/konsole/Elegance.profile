@@ -10,8 +10,5 @@ CursorShape=1
 Name=Elegance
 Parent=FALLBACK/
 
-[Interaction Options]
-TextEditorCmd=1
-
 [Scrolling]
 HistoryMode=2
