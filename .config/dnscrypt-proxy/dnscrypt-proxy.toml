@@ -85,7 +85,7 @@ require_nolog = true
 require_nofilter = true
 
 # Server names to avoid even if they match all criteria
-disabled_server_names = ['cs-bulgaria', 'cs-ro']
+disabled_server_names = []
 
 
 ## Always use TCP to connect to upstream servers.
@@ -122,7 +122,7 @@ http3 = false
 ## increase this. Startup may be slower if you do so.
 ## Don't increase it too much. 10000 is the highest reasonable value.
 
-timeout = 5000
+timeout = 1000
 
 
 ## Keepalive for HTTP (HTTPS, HTTP/2, HTTP/3) queries, in seconds
@@ -261,7 +261,7 @@ cert_refresh_delay = 240
 ## not be sent there. If you're using DNSCrypt or Anonymized DNS and your
 ## lists are up to date, these resolvers will not even be used.
 
-bootstrap_resolvers = ['9.9.9.11:53', '8.8.8.8:53']
+bootstrap_resolvers = ['45.11.45.11:53']
 
 
 ## When internal DNS resolution is required, for example to retrieve
@@ -276,7 +276,7 @@ bootstrap_resolvers = ['9.9.9.11:53', '8.8.8.8:53']
 ## (*) this is incompatible with systemd sockets.
 ## `listen_addrs` must not be empty.
 
-ignore_system_dns = true
+ignore_system_dns = false
 
 
 ## Maximum time (in seconds) to wait for network connectivity before
@@ -297,7 +297,7 @@ netprobe_timeout = -1
 ## On other operating systems, the connection will be initialized
 ## but nothing will be sent at all.
 
-netprobe_address = '9.9.9.9:53'
+netprobe_address = '45.11.45.11:53'
 
 
 ## Offline mode - Do not use any remote encrypted servers.
@@ -828,7 +828,7 @@ fragments_blocked = ['cisco', 'cisco-ipv6', 'cisco-familyshield', 'cisco-familys
 ## in different countries, operated by different entities, on distinct ISPs...)
 
  routes = [
-		{ server_name='*', via=['anon-cs-bulgaria', 'anon-cs-ro'] }
+    { server_name='*', via=['*'] }
 #    { server_name='example-server-1', via=['anon-example-1', 'anon-example-2'] },
 #    { server_name='example-server-2', via=['sdns://gRIxMzcuNzQuMjIzLjIzNDo0NDM'] }
  ]
