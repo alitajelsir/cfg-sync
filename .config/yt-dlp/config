@@ -24,4 +24,4 @@
 --embed-subs
 --embed-thumbnail
 --convert-thumbnails png
---add-metadata
+--embed-metadata
