@@ -1,15 +1,15 @@
-# configure prompt
-# Use instant prompt
-[[ ! -r $XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh ]] ||
-	source $XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh
+# Use znap to mange plugins
+# Set znap local and remote sources
+() {
+	local znap_local znap_remote
+		znap_local=$XDG_DATA_HOME/znap/zsh-snap
+		znap_remote=https://github.com/marlonrichert/zsh-snap.git
 
-# Set prompt theme
-[[ ! -r $ZDOTDIR/.p10k.zsh ]] ||
-	source $ZDOTDIR/.p10k.zsh
-
-# Set cursor shape to bar
-_cursor_bar() { printf '\e[6 q' }
-precmd_functions+=(_cursor_bar)
+# Install znap
+	[[ -r $znap_local/znap.zsh ]] ||
+		git clone --depth 1 $znap_remote $znap_local
+	source $znap_local/znap.zsh
+}
 
 
 # Install plugins
