@@ -18,10 +18,10 @@
 	# List plugins
 	local -a plugins=(
 		romkatv/powerlevel10k
-		marlonrichert/zsh-autocomplete
+		zdharma-continuum/fast-syntax-highlighting
 		marlonrichert/zcolors
 		zsh-users/zsh-autosuggestions
-		zdharma-continuum/fast-syntax-highlighting
+		marlonrichert/zsh-autocomplete
 		marlonrichert/zsh-edit
 	)
 
