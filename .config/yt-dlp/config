@@ -13,7 +13,6 @@
 
 # Video format options
 #--format-sort vcodec:av01
---format-sort hdr:sdr
 --merge-output-format mkv
 
 # Subtitle options
