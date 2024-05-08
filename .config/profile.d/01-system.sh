@@ -1,5 +1,5 @@
 # Configure locale
-export LC_COLLATE=C.UTF-8
+export LC_COLLATE=C
 export LC_CTYPE=en_US.UTF-8
 
 # Append PATH
