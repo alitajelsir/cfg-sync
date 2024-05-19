@@ -1,0 +1,14 @@
+[/home/ali/.local/share/plasma-vault/vault.enc]
+activities=
+backend=gocryptfs
+lastError=
+lastStatus=
+mountPoint=/home/ali/Vault
+name=Vault
+offlineOnly=false
+
+[EncryptedDevices]
+/home/ali/.local/share/plasma-vault/vault.enc=true
+
+[UI-notice]
+SkipNotice-gocryptfs-message=false
