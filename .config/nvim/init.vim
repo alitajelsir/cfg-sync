@@ -1,6 +1,6 @@
 " Appearance
+highlight Normal guifg=254 guibg=232
 set number numberwidth=1
-highlight LineNr ctermbg=232 ctermfg=246
 autocmd TermOpen * setlocal nonumber
 
 
