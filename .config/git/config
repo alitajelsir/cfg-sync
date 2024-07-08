@@ -64,7 +64,7 @@
 [difftool]
 	prompt = false
 [difftool "meld"]
-	cmd = meld "$LOCAL" "$REMOTE"
+	cmd = meld "$REMOTE" "$LOCAL"
 [maintenance]
 	repo = /home/ali/.local/share/znap/zsh-snap
 	repo = /home/ali/.local/share/znap/marlonrichert/zcolors
@@ -76,7 +76,7 @@
 [merge]
 	tool = meld
 [mergetool "meld"]
-	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+	cmd = meld "$REMOTE" "$MERGED" "$LOCAL" --output "$MERGED"
 [user]
 	name = Ali Tajelsir
 	email = alitajelsir@gmail.com
