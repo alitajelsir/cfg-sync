@@ -35,13 +35,13 @@ Color=95,175,95
 Color=0,255,175
 
 [Color3]
-Color=215,215,0
+Color=215,215,175
 
 [Color3Faint]
-Color=215,215,135
+Color=215,175,95
 
 [Color3Intense]
-Color=255,255,135
+Color=215,215,135
 
 [Color4]
 Color=0,135,215
