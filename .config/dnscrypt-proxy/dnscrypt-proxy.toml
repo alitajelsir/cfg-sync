@@ -85,7 +85,7 @@ require_nolog = true
 require_nofilter = true
 
 # Server names to avoid even if they match all criteria
-disabled_server_names = []
+disabled_server_names = ['cs-ch', 'cs-hungary', 'cs-madrid', 'cs-nl', 'cs-ro']
 
 
 ## Always use TCP to connect to upstream servers.
@@ -150,7 +150,7 @@ blocked_query_response = 'hinfo'
 ## Randomly choose 1 of the fastest 2, half, n, 1 or all live servers by latency.
 ## The response quality still depends on the server itself.
 
-# lb_strategy = 'p2'
+lb_strategy = 'first'
 
 ## Set to `true` to constantly try to estimate the latency of all the resolvers
 ## and adjust the load-balancing parameters accordingly, or to `false` to disable.
@@ -827,11 +827,11 @@ fragments_blocked = ['cisco', 'cisco-ipv6', 'cisco-familyshield', 'cisco-familys
 ## select (relay,server) pairs that work well and fit your own criteria (close by or
 ## in different countries, operated by different entities, on distinct ISPs...)
 
- routes = [
-    { server_name='*', via=['*'] }
+routes = [
+    { server_name='*', via=['anon-cs-ch', 'anon-cs-hungary', 'anon-cs-madrid', 'anon-cs-nl', 'anon-cs-ro'] }
 #    { server_name='example-server-1', via=['anon-example-1', 'anon-example-2'] },
 #    { server_name='example-server-2', via=['sdns://gRIxMzcuNzQuMjIzLjIzNDo0NDM'] }
- ]
+]
 
 
 ## Skip resolvers incompatible with anonymization instead of using them directly
