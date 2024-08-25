@@ -37,19 +37,6 @@
 
 
 # Configure plugins
-# Allow path completion
-zstyle ':completion:*:paths' path-completion yes
-
-# Disable grouping matches
-zstyle ':completion:*' list-grouped no
-
-# Bind Tab to menu selection
-bindkey '^I' menu-select
-
-# Restore up and down arrow keys behavior
-bindkey '^[[A' .up-line-or-history
-bindkey '^[[B' .down-line-or-history
-
 # Cache zcolor output
 znap eval zcolors zcolors
 
