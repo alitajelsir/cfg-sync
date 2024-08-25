@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=elegance
-Font=FiraCode Nerd Font Mono,10,-1,5,53,0,0,0,0,0,Retina
+Font=FiraCode Nerd Font Mono,10,-1,5,450,0,0,0,0,0,0,0,0,0,0,1,Retina
 UseFontLineChararacters=false
 
 [Cursor Options]
