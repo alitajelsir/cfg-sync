@@ -31,7 +31,7 @@
 	setopt $options
 }
 
-unsetopt FLOWCONTROL
+unsetopt FLOW_CONTROL
 
 # Allow path completion
 zstyle ':completion:*:paths' path-completion yes
