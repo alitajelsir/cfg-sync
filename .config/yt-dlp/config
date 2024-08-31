@@ -11,8 +11,8 @@
 --continue
 
 # Video format options
-#--format-sort vcodec:av01
---format-sort hdr:sdr
+--format bestvideo[format_note!*=Premium]+bestaudio/best
+--format-sort vcodec:av01
 --merge-output-format mkv
 
 # Subtitle options
