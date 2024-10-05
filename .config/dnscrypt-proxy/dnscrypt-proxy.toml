@@ -85,7 +85,7 @@ require_nolog = true
 require_nofilter = true
 
 # Server names to avoid even if they match all criteria
-disabled_server_names = ['cs-ch', 'cs-hungary', 'cs-madrid', 'cs-nl', 'cs-ro']
+disabled_server_names = []
 
 
 ## Always use TCP to connect to upstream servers.
@@ -828,7 +828,7 @@ fragments_blocked = ['cisco', 'cisco-ipv6', 'cisco-familyshield', 'cisco-familys
 ## in different countries, operated by different entities, on distinct ISPs...)
 
 routes = [
-    { server_name='*', via=['anon-cs-ch', 'anon-cs-hungary', 'anon-cs-madrid', 'anon-cs-nl', 'anon-cs-ro'] }
+    { server_name='*', via=['*'] }
 #    { server_name='example-server-1', via=['anon-example-1', 'anon-example-2'] },
 #    { server_name='example-server-2', via=['sdns://gRIxMzcuNzQuMjIzLjIzNDo0NDM'] }
 ]
