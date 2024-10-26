@@ -11,6 +11,9 @@
 	source $znap_local/znap.zsh
 }
 
+# Disable znap git maintenance
+zstyle ':znap:*:*' git-maintenance off
+
 
 # Install plugins
 () {
@@ -37,9 +40,12 @@
 
 
 # Configure plugins
-# Cache zcolor output
-znap eval zcolors zcolors
-
 # Set syntax highlighting theme
 fast-theme -s | grep -Foqm1 elegance ||
 	fast-theme -q XDG:elegance
+
+# Cache zcolor output
+znap eval zcolors zcolors
+
+# Set completers
+zstyle ':completion:*' completer _extensions _complete _complete:-fuzzy _correct _approximate _ignored
