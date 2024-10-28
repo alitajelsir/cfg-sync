@@ -13,3 +13,9 @@ export XDG_STATE_HOME=$HOME/.local/state
 
 # Set zsh configuration directory
 ZDOTDIR=$HOME/.config/zsh
+
+# Fix ownership
+if [[ $UID != 0 ]]; then
+	\fd . -u --owner=root $HOME $PREFIIX -X \
+		sudo chown $USERNAME:$USERNAME
+fi
