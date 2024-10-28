@@ -6,12 +6,12 @@
 		%= \$= ❯=
 		-='cd -'
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
-		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync/ --work-tree $HOME"
+		cfg="git --git-dir $GITDIR/cfg-sync/ --work-tree $HOME"
 		cget=termux-clipboard-get
 		cp='cp -iv'
 		cset=termux-clipboard-set
 		eza='eza -abF --group-directories-first --icons=auto'
-		fd='fd -uL'
+		fd='fd -uL --exclude=.suroot'
 		ffmpeg='ffmpeg -hide_banner'
 		ffprobe='ffprobe -hide_banner'
 		ls=eza
