@@ -11,6 +11,7 @@
 
 		# Expansion and Globbing
 		EXTENDED_GLOB
+		GLOB
 		GLOB_DOTS
 		GLOB_STAR_SHORT
 		NUMERIC_GLOB_SORT
