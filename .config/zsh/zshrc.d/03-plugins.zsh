@@ -1,4 +1,10 @@
 # Use znap to mange plugins
+# Disable znap asynchronous compilation
+zstyle ':znap:*' auto-compile no
+
+# Disable znap git maintenance
+zstyle ':znap:*:*' git-maintenance off
+
 # Set znap local and remote sources
 () {
 	local znap_local znap_remote
@@ -10,9 +16,6 @@
 		git clone --depth 1 $znap_remote $znap_local
 	source $znap_local/znap.zsh
 }
-
-# Disable znap git maintenance
-zstyle ':znap:*:*' git-maintenance off
 
 
 # Install plugins
