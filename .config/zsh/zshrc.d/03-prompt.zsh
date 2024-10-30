@@ -1,3 +1,6 @@
+# Use Powerlevel10k
+znap source romkatv/powerlevel10k
+
 # Use instant prompt
 [[ ! -r $XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh ]] ||
 	source $XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh
@@ -8,4 +11,4 @@
 
 # Set cursor shape to bar
 _cursor_bar() { printf '\e[6 q' }
-precmd_functions+=(_cursor_bar)
+precmd_functions+=(_kos _cursor_bar)
