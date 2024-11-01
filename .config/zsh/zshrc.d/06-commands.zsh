@@ -6,7 +6,6 @@
 		%= \$= ❯=
 		-='cd -'
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
-		cfg="git --git-dir $GITDIR/cfg-sync/ --work-tree $HOME"
 		cget=termux-clipboard-get
 		cp='cp -iv'
 		cset=termux-clipboard-set
@@ -28,6 +27,9 @@
 	# Set aliases
 	alias -- $commands
 }
+
+[[ $UID == 0 ]] ||
+	alias cfg="git --git-dir $GITDIR/cfg-sync/ --work-tree $HOME"
 
 
 # Configure functions
