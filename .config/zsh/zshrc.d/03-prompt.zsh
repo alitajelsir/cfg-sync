@@ -11,4 +11,4 @@ znap source romkatv/powerlevel10k
 
 # Set cursor shape to bar
 _cursor_bar() { printf '\e[6 q' }
-precmd_functions+=(_kos _cursor_bar)
+precmd_functions+=(_cursor_bar)
