@@ -47,7 +47,7 @@ zstyle ':completion:*' list-grouped no
 HISTFILE=$ZDOTDIR/.zhistory
 SAVEHIST=$(( 10 * 1000 ))
 HISTSIZE=$(( 1.2 * SAVEHIST ))
-HISTORY_IGNORE='(-|..|/|cd|cfg|ls|pwd|run-help|~)*'
+HISTORY_IGNORE='(-|..|/|apt|cd|cfg|cp|ls|mv|pip|pkg|pwd|rm|rsync|run-help|~)*'
 
 # Access on-line help
 unalias run-help
