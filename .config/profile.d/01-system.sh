@@ -19,3 +19,6 @@ if [[ $UID != 0 ]]; then
 	\fd . -u --owner=root $HOME $PREFIIX -X \
 		sudo chown $USERNAME:$USERNAME
 fi
+
+# Set apt configuration file
+export APT_CONFIG=$XDG_CONFIG_HOME/apt/apt.conf
