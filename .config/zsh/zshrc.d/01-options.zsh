@@ -47,7 +47,15 @@ zstyle ':completion:*' list-grouped no
 HISTFILE=$ZDOTDIR/.zhistory
 SAVEHIST=$(( 10 * 1000 ))
 HISTSIZE=$(( 1.2 * SAVEHIST ))
-HISTORY_IGNORE='(-|..|/|apt|cd|cfg|cp|ls|mv|pip|pkg|pwd|rm|rsync|run-help|~)*'
+
+local -a to_be_ignored=(
+	- .. / \~
+	cd ls pwd
+	cp mv rm rsync
+	apt cfg pip pkg znap
+	run-help
+)
+HISTORY_IGNORE="(${(j:|:)to_be_ignored})*"
 
 # Access on-line help
 unalias run-help
