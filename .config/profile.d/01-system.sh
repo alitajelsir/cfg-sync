@@ -15,9 +15,17 @@ export XDG_STATE_HOME=$HOME/.local/state
 ZDOTDIR=$HOME/.config/zsh
 
 # Fix ownership
-if [[ $UID != 0 ]]; then
+[[ $UID == 0 ]] ||
 	\fd . -u --owner=root $HOME $PREFIIX -X \
 		sudo chown $USERNAME:$USERNAME
+
+# Remove .tmp created by tsu
+if [[ $UID == 0 ]]; then
+	_rm_tmp() {
+		[[ ! -d $HOME/.tmp ]] ||
+			rm -rf $HOME/.tmp
+	}
+	trap _rm_tmp EXIT
 fi
 
 # Set apt configuration file
