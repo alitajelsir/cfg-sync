@@ -24,18 +24,18 @@
 		HIST_NO_STORE
 		HIST_REDUCE_BLANKS
 		HIST_VERIFY
-		INC_APPEND_HISTORY
+		SHARE_HISTORY
 
 		# Input and Output
 		CORRECT
 		INTERACTIVE_COMMENTS
+		NO_FLOW_CONTROL
 	)
 
 	# Set options
 	setopt $_options
 }
 
-unsetopt FLOW_CONTROL
 
 # Allow path completion
 zstyle ':completion:*:paths' path-completion yes
