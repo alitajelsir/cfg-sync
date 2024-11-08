@@ -1,36 +1,40 @@
 # Configure options
-# List options	
-local -a _options=(
-	# Changing Directories
-	AUTO_CD
+() {
 
-	# Completion
-	GLOB_COMPLETE
+	# List options	
+	local -a _options=(
+		# Changing Directories
+		AUTO_CD
 
-	# Expansion and Globbing
-	EXTENDED_GLOB
-	GLOB
-	GLOB_DOTS
-	GLOB_STAR_SHORT
-	NUMERIC_GLOB_SORT
+		# Completion
+		GLOB_COMPLETE
 
-	# History
-	HIST_FCNTL_LOCK
-	HIST_IGNORE_ALL_DUPS
-	HIST_IGNORE_SPACE
-	HIST_NO_FUNCTIONS
-	HIST_NO_STORE
-	HIST_REDUCE_BLANKS
-	HIST_VERIFY
-	INC_APPEND_HISTORY
+		# Expansion and Globbing
+		EXTENDED_GLOB
+		GLOB
+		GLOB_DOTS
+		GLOB_STAR_SHORT
+		NUMERIC_GLOB_SORT
 
-	# Input and Output
-	CORRECT
-	INTERACTIVE_COMMENTS
-)
+		# History
+		HIST_FCNTL_LOCK
+		HIST_IGNORE_ALL_DUPS
+		HIST_IGNORE_SPACE
+		HIST_NO_FUNCTIONS
+		HIST_NO_STORE
+		HIST_REDUCE_BLANKS
+		HIST_VERIFY
+		INC_APPEND_HISTORY
 
-# Set options
-setopt $_options
+		# Input and Output
+		CORRECT
+		INTERACTIVE_COMMENTS
+	)
+
+	# Set options
+	setopt $_options
+}
+
 unsetopt FLOW_CONTROL
 
 # Allow path completion
@@ -44,14 +48,17 @@ HISTFILE=$ZDOTDIR/.zhistory
 SAVEHIST=$(( 10 * 1000 ))
 HISTSIZE=$(( 1.2 * SAVEHIST ))
 
-local -a _ignored=(
-	- .. / \~
-	cd ls pwd
-	cp mv rm rsync
-	apt cfg pip pkg znap
-	run-help
-)
-HISTORY_IGNORE="(${(j:|:)_ignored})*"
+() {
+	local -a _ignore=(
+		- .. / \~
+		cd ls pwd
+		cp mv rm rsync
+		apt cfg pip pkg znap
+		run-help
+	)
+
+HISTORY_IGNORE="(${(j:|:)_ignore})*"
+}
 
 # Access on-line help
 unalias run-help

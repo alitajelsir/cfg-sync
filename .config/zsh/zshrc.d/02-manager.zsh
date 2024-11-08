@@ -7,11 +7,13 @@ zstyle ':znap:*' auto-compile no
 zstyle ':znap:*:*' git-maintenance off
 
 # Set znap local and remote sources
-local _znap_local _znap_remote
-	_znap_local=$XDG_DATA_HOME/zsh/plugins/zsh-snap
-	_znap_remote=https://github.com/marlonrichert/zsh-snap.git
+() {
+	local _znap_local _znap_remote
+		_znap_local=$XDG_DATA_HOME/zsh/plugins/zsh-snap
+		_znap_remote=https://github.com/marlonrichert/zsh-snap.git
 
 # Install znap
-[[ -r $_znap_local/znap.zsh ]] ||
-	git clone --depth 1 $_znap_remote $_znap_local
-source $_znap_local/znap.zsh
+	[[ -r $_znap_local/znap.zsh ]] ||
+		git clone --depth 1 $_znap_remote $_znap_local
+	source $_znap_local/znap.zsh
+}
