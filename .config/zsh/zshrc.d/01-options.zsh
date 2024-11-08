@@ -1,7 +1,7 @@
 # Configure options
 () {
 
-	# List options	
+	# List options
 	local -a _options=(
 		# Changing Directories
 		AUTO_CD
