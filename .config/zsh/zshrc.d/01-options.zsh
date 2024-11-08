@@ -44,14 +44,14 @@ HISTFILE=$ZDOTDIR/.zhistory
 SAVEHIST=$(( 10 * 1000 ))
 HISTSIZE=$(( 1.2 * SAVEHIST ))
 
-local -a to_be_ignored=(
+local -a _ignored=(
 	- .. / \~
 	cd ls pwd
 	cp mv rm rsync
 	apt cfg pip pkg znap
 	run-help
 )
-HISTORY_IGNORE="(${(j:|:)to_be_ignored})*"
+HISTORY_IGNORE="(${(j:|:)_ignored})*"
 
 # Access on-line help
 unalias run-help
