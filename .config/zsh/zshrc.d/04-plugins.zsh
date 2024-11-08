@@ -30,7 +30,8 @@ fast-theme -s | grep -Foqm1 elegance ||
 znap eval zcolors zcolors
 
 # Set completers
-zstyle ':completion:*' completer _extensions _complete _complete:-fuzzy _correct _approximate _ignored
+zstyle ':completion:*' completer \
+	_extensions _complete _complete:-fuzzy _correct _approximate _ignored
 
 # Set recent directories file
 zstyle ':chpwd:*' recent-dirs-file $XDG_CACHE_HOME/zsh/chpwd-recent-dirs
