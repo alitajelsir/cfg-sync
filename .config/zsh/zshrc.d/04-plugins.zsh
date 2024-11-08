@@ -14,9 +14,9 @@
 	znap clone $_plugins
 
 	# Source plugins one by one
-	local _p=
-	for _p in $_plugins; do
-		znap source $_p
+	local _plugin=
+	for _plugin in $_plugins; do
+		znap source $_plugin
 	done
 }
 
