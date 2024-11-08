@@ -1,24 +1,21 @@
 # Install plugins
-() {
+# List plugins
+local -a _plugins=(
+	zdharma-continuum/fast-syntax-highlighting
+	marlonrichert/zcolors
+	zsh-users/zsh-autosuggestions
+	marlonrichert/zsh-autocomplete
+	marlonrichert/zsh-edit
+)
 
-	# List plugins
-	local -a plugins=(
-		zdharma-continuum/fast-syntax-highlighting
-		marlonrichert/zcolors
-		zsh-users/zsh-autosuggestions
-		marlonrichert/zsh-autocomplete
-		marlonrichert/zsh-edit
-	)
+# Clone plugins in parallel
+znap clone $_plugins
 
-	# Clone plugins in parallel
-	znap clone $plugins
-
-	# Source plugins one by one
-	local p=
-	for p in $plugins; do
-		znap source $p
-	done
-}
+# Source plugins one by one
+local p=
+for p in $_plugins; do
+	znap source $p
+done
 
 
 # Configure plugins
