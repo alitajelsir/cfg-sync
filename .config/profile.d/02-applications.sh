@@ -8,4 +8,4 @@ export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/rg/config
 export XZ_DEFAULTS='-T0'
 
 [[ $UID == 0 ]] ||
-	ln -sf /sdcard/* $HOME
+	ln -sf /storage/emulated/0/* $HOME
