@@ -51,7 +51,7 @@ HISTSIZE=$(( 1.2 * SAVEHIST ))
 () {
 	local -a _ignore=(
 		- .. / \~
-		cd ls pwd
+		cd ls plg pwd
 		cp mv rm rsync
 		apt cfg pip pkg znap
 		run-help
