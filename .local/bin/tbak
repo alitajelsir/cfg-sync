@@ -1,9 +1,7 @@
 #!/usr/bin/env zsh
 # Check UID
-if [[ $UID == 0 ]]; then
-	echo 'Can not create backup as root'
-	return
-fi
+[[ $UID != 0 ]] ||
+	echo 'Can not create backup as root' && return
 
 # Set backup directories
 local dest src ver
@@ -15,7 +13,7 @@ local dest src ver
 	mkdir -p $dest
 
 # Fix ownership
-\fd . -u --owner=root $HOME $PREFIIX -X \
+fd . -u --owner=root $HOME $PREFIIX -X \
 		sudo chown $USERNAME:$USERNAME
 
 # Start backup
