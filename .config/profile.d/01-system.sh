@@ -16,7 +16,7 @@ ZDOTDIR=$HOME/.config/zsh
 
 # Fix ownership
 [[ $UID == 0 ]] ||
-	(\fd . -u --owner=root $HOME $PREFIIX -X \
+	(fd . -u --owner=root $HOME $PREFIIX -X \
 	sudo chown $USERNAME:$USERNAME &)
 
 # Remove .tmp created by tsu
