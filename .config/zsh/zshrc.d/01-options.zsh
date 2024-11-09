@@ -30,6 +30,10 @@
 		CORRECT
 		INTERACTIVE_COMMENTS
 		NO_FLOW_CONTROL
+		NO_CLOBBER
+
+		# Shell Emulation
+		APPEND_CREATE
 	)
 
 	# Set options
