@@ -4,8 +4,8 @@
 
 # Split .zshrc into multiple files in zshrc.d
 () {
-	local zshrc=
-	for zshrc in $ZDOTDIR/zshrc.d/<->-*.zsh(n); do
-		source $zshrc
+	local _zshrc=
+	for _zshrc in $ZDOTDIR/zshrc.d/<->-*.zsh(n); do
+		source $_zshrc
 	done
 }
