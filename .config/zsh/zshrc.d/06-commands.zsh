@@ -2,7 +2,7 @@
 () {
 
 	# List aliases
-	local -a commands=(
+	local -a _commands=(
 		%= \$= ❯=
 		-='cd -'
 		aria2c="aria2c --dir $HOME/Downloads"
@@ -28,7 +28,7 @@
 	)
 
 	# Set aliases
-	alias -- $commands
+	alias -- $_commands
 }
 
 # Set global aliases
