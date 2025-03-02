@@ -185,7 +185,7 @@ blocked_query_response = 'hinfo'
 
 ## Delay, in minutes, after which certificates are reloaded
 
-cert_refresh_delay = 60
+cert_refresh_delay = 240
 
 
 ## Initially don't check DNSCrypt server certificates for expiration, and
