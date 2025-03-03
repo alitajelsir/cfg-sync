@@ -85,7 +85,7 @@ require_nolog = true
 require_nofilter = true
 
 # Server names to avoid even if they match all criteria
-disabled_server_names = ['dnscry.pt-telaviv-ipv4', 'dnscry.pt-telaviv-ipv6']
+disabled_server_names = ['cs-bulgaria', 'serbica', 'sth-dnscrypt-se', 'dnscry.pt-telaviv-ipv4', 'dnscry.pt-telaviv-ipv6']
 
 
 ## Always use TCP to connect to upstream servers.
