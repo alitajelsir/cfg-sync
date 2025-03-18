@@ -828,7 +828,7 @@ fragments_blocked = ['cisco', 'cisco-ipv6', 'cisco-familyshield', 'cisco-familys
 ## in different countries, operated by different entities, on distinct ISPs...)
 
 routes = [
-    { server_name='*', via=['anon-cs-bulgaria', 'anon-dnswarden-swiss', 'anon-serbica', 'anon-kama','anon-sth-se'] }
+    { server_name='*', via=['anon-cs-bulgaria', 'anon-kama', 'anon-dnswarden-swiss', 'anon-serbica', 'anon-sth-se'] }
 #    { server_name='example-server-1', via=['anon-example-1', 'anon-example-2'] },
 #    { server_name='example-server-2', via=['sdns://gRIxMzcuNzQuMjIzLjIzNDo0NDM'] }
 ]
