@@ -85,7 +85,7 @@ require_nolog = true
 require_nofilter = true
 
 # Server names to avoid even if they match all criteria
-disabled_server_names = ['cs-bulgaria', 'serbica', 'sth-dnscrypt-se', 'dnscry.pt-telaviv-ipv4', 'dnscry.pt-telaviv-ipv6']
+disabled_server_names = ['dnscry.pt-telaviv-ipv4', 'dnscry.pt-telaviv-ipv6']
 
 
 ## Always use TCP to connect to upstream servers.
@@ -828,7 +828,7 @@ fragments_blocked = ['cisco', 'cisco-ipv6', 'cisco-familyshield', 'cisco-familys
 ## in different countries, operated by different entities, on distinct ISPs...)
 
 routes = [
-    { server_name='*', via=['anon-cs-bulgaria', 'anon-kama', 'anon-dnswarden-swiss', 'anon-serbica', 'anon-sth-se'] }
+    { server_name='*', via=['anon-kama', 'anon-dnswarden-swiss'] }
 #    { server_name='example-server-1', via=['anon-example-1', 'anon-example-2'] },
 #    { server_name='example-server-2', via=['sdns://gRIxMzcuNzQuMjIzLjIzNDo0NDM'] }
 ]
