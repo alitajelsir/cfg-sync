@@ -3,61 +3,62 @@
 	ls = log --abbrev-commit --compact-summary --shortstat
 	ss = status -sb
 [color "branch"]
-	plain = 6 normal
-	remote = 5 normal
-	current = 6 normal reverse
-	local = 6 normal
-	upstream = 5 normal
+	plain = normal
+	remote = 6 normal
+	current = 4
+	local = 12 normal
+	upstream = 6 normal
 [color "decorate"]
-	branch = 6 normal
-	tag = 3 normal
-	remotebranch = 5 normal
-	stash = normal dim
-	grafted = 1 normal italic
-	HEAD = 6 normal italic
+	branch = 12 normal
+	tag = 5 normal
+	remotebranch = 6 normal
+	stash = 8 normal
+	grafted = 1 normal
+	HEAD = 4
 [color "diff"]
 	commit = 3 normal
-	newMoved = 3
+	newMoved = 4
 	oldMovedAlternativeDimmed = 5 dim
-	frag = normal dim
+	frag = 8 normal
 	oldMovedAlternative = 5
 	contextBold = normal bold
 	newBold = 2 bold
 	context = normal
-	oldMoved = 3
+	oldMoved = 4
 	oldBold = 1 bold
-	newMovedDimmed = 3 dim
-	func = normal dim
-	meta = normal dim
+	newMovedDimmed = 4 dim
+	func = 8 normal
+	meta = 8 normal
 	newDimmed = 2 dim
 	newMovedAlternative = 5
 	new = 2
 	newMovedAlternativeDimmed = 5 dim
 	whitespace = normal 9
-	oldMovedDimmed = 3 dim
+	oldMovedDimmed = 4 dim
 	oldDimmed = 1 dim
 	old = 1
+	contextDimmed = normal dim
 [color "interactive"]
-	header = normal dim bold
+	header = 8 normal bold
 	prompt = 4
-	help = normal dim
-	error = 1 normal italic
+	help = 8 normal
+	error = 9 normal
 [color "remote"]
-	hint = normal dim
-	success = 2 normal
-	error = 1 normal
-	warning = 3 normal
+	hint = 8 normal
+	success = 10 normal
+	error = 9 normal
+	warning = 11 normal
 [color "status"]
-	branch = 6 normal
+	branch = 12 normal
 	added = 10 normal
 	updated = 10 normal
-	localbranch = 6 normal
+	localbranch = 12 normal
 	changed = 11 normal
 	header = normal
-	remotebranch = 5 normal
-	nobranch = 1 normal italic
+	remotebranch = 6 normal
+	nobranch = 1 normal
 	unmerged = 9 normal
-	untracked = normal dim
+	untracked = 8 normal
 [diff]
 	tool = meld
 	colorMoved = zebra
@@ -65,14 +66,6 @@
 	prompt = false
 [difftool "meld"]
 	cmd = meld "$REMOTE" "$LOCAL"
-[maintenance]
-	repo = /home/ali/.local/share/znap/zsh-snap
-	repo = /home/ali/.local/share/znap/marlonrichert/zcolors
-	repo = /home/ali/.local/share/znap/marlonrichert/zsh-autocomplete
-	repo = /home/ali/.local/share/znap/marlonrichert/zsh-edit
-	repo = /home/ali/.local/share/znap/romkatv/powerlevel10k
-	repo = /home/ali/.local/share/znap/zdharma-continuum/fast-syntax-highlighting
-	repo = /home/ali/.local/share/znap/zsh-users/zsh-autosuggestions
 [merge]
 	tool = meld
 [mergetool "meld"]
