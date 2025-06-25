@@ -21,8 +21,7 @@ ZDOTDIR=$HOME/.config/zsh
 
 # Remove .tmp created by tsu
 [[ $UID != 0 ]] ||
-	trap "[[ ! -d $HOME/.tmp ]] || \
-			rm -rf $HOME/.tmp" EXIT
+	trap "[[ ! -d $HOME/.tmp ]] || rm -rf $HOME/.tmp" EXIT
 
 # Set apt configuration file
 export APT_CONFIG=$XDG_CONFIG_HOME/apt/apt.conf
