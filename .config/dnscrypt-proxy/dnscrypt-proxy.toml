@@ -32,8 +32,11 @@ blocked_query_response = 'hinfo'
 # initializing the proxy
 netprobe_timeout = -1
 
-## Address and port to try initializing a connection to, just to check
+# Address and port to try initializing a connection to, just to check
 netprobe_address = '45.11.45.11:53'
+
+# Ignore system dns for internal DNS resolution
+ignore_system_dns = false
 
 
 # Filters
