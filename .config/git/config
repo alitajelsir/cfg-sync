@@ -12,7 +12,7 @@
 	branch = 12 normal
 	tag = 5 normal
 	remotebranch = 6 normal
-	stash = 8 normal
+	stash = 3 normal
 	grafted = 1 normal
 	HEAD = 4
 [color "diff"]
