@@ -15,5 +15,3 @@ export SSH_ASKPASS_REQUIRE=prefer
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 export VISUAL=nvim
 export XZ_DEFAULTS=-T0
-[ "$XDG_SESSION_TYPE" != "wayland" ] ||
-	export MOZ_ENABLE_WAYLAND=1
