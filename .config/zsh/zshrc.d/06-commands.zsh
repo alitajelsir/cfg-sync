@@ -7,7 +7,7 @@
 		-='cd -'
 		aria2c="aria2c --dir $HOME/Downloads"
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
-		cfg="git --git-dir $XDG_CONFIG_HOME/cfg-sync --work-tree $HOME"
+		cfg="git --git-dir $XDG_DATA_HOME/git/cfg-sync --work-tree $HOME"
 		cp='cp -iv'
 		eza='eza -abF --icons --group-directories-first'
 		fd='fd -u'
