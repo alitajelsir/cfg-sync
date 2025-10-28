@@ -57,7 +57,6 @@ HISTSIZE=$(( 1.2 * SAVEHIST ))
 		- .. / \~
 		cd ls plg pwd
 		cp mv rm rsync
-		apt cfg pip pkg znap
 		run-help
 	)
 
