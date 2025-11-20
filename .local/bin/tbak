@@ -26,6 +26,7 @@ local -a tar_opts=(
 	--warning='no-file-ignored'
 	--create --file=$dest/termux_$ver.bak.tar.xz
 	--directory=$src
+	--exclude={.cache,'tmp/*'}
 	home usr
 )
 tar $tar_opts
