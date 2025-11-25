@@ -7,19 +7,17 @@
 		-='cd -'
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		cget=termux-clipboard-get
-		cp='cp -iv'
+		cpi='cp -iv'
 		cset=termux-clipboard-set
-		eza='eza -abF --group-directories-first --icons=auto'
-		fd='fd -uL --exclude=.suroot'
-		ffmpeg='ffmpeg -hide_banner'
-		ffprobe='ffprobe -hide_banner'
-		ls=eza
-		mv='mv -iv'
+		lsa='eza -abF --group-directories-first --icons=auto'
+		fh='fd -uL --exclude=.suroot'
+		ffm='ffmpeg -hide_banner'
+		ffp='ffprobe -hide_banner'
+		mvi='mv -iv'
 		open=termux-open
 		plg="cd $(mktemp -d)"
-		rm='rm -Iv'
-		rsync='rsync -P'
-		vi=nvim
+		rmi='rm -Iv'
+		rsp='rsync -P'
 		mdl=yt-dlp
 		mdla='yt-dlp -x -f ba/b'
 	)
