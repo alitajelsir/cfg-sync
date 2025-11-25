@@ -8,22 +8,18 @@
 		aria2c="aria2c --dir $HOME/Downloads"
 		bh='col -bx | bat -pl help --theme=Monokai\ Extended'
 		cfg="git --git-dir $XDG_DATA_HOME/git/cfg-sync --work-tree $HOME"
-		cp='cp -iv'
-		eza='eza -abF --icons --group-directories-first'
-		fd='fd -u'
-		ffmpeg='ffmpeg -hide_banner'
-		ffprobe='ffprobe -hide_banner'
-		help=run-help
-		ls=eza
+		cpi='cp -iv'
+		lsa='eza -abF --icons --group-directories-first'
+		fh='fd -u'
+		ffm='ffmpeg -hide_banner'
+		ffp='ffprobe -hide_banner'
+		lsa=eza
 		mdl=yt-dlp
 		mdla='yt-dlp -x -f ba/b'
-		mv='mv -iv'
+		mvi='mv -iv'
 		plg="cd $(mktemp -d)"
-		pvc='protonvpn-cli c -f'
-		pvd='protonvpn-cli d'
-		pvs='protonvpn-cli s'
-		rm='rm -Iv'
-		rsync='rsync -P'
+		rmi='rm -Iv'
+		rsp='rsync -P'
 		sudo='sudo '
 	)
 

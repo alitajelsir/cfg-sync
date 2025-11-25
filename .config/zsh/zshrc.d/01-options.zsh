@@ -51,7 +51,7 @@ zstyle ':completion:*' list-grouped no
 HISTFILE=$ZDOTDIR/.zhistory
 SAVEHIST=$(( 10 * 1000 ))
 HISTSIZE=$(( 1.2 * SAVEHIST ))
-HISTORY_IGNORE="(-|..|~|run-help)*"
+HISTORY_IGNORE='(-|..|/|~|cd |run-help)*'
 
 # Access on-line help
 unalias run-help
