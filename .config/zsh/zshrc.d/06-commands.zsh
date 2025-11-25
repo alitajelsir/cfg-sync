@@ -13,7 +13,6 @@
 		fh='fd -u'
 		ffm='ffmpeg -hide_banner'
 		ffp='ffprobe -hide_banner'
-		lsa=eza
 		mdl=yt-dlp
 		mdla='yt-dlp -x -f ba/b'
 		mvi='mv -iv'
