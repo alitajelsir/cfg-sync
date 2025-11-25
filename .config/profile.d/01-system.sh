@@ -16,12 +16,12 @@ ZDOTDIR=$HOME/.config/zsh
 
 # Fix ownership
 [[ $UID == 0 ]] ||
-	(\fd . -u --owner=root $HOME $PREFIIX -X \
+	(fd . -u --owner=root $HOME $PREFIIX -X \
 	sudo chown $USERNAME:$USERNAME &)
 
 # Remove tmp created by sudo
 [[ $UID != 0 ]] ||
-	trap "\fd . -t d --owner=root $PREFIX/tmp -X rm -rf" EXIT
+	trap "fd . -t d --owner=root $PREFIX/tmp -X rm -rf" EXIT
 
 # Set apt configuration file
 export APT_CONFIG=$XDG_CONFIG_HOME/apt/apt.conf
