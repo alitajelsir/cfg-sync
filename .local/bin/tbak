@@ -7,7 +7,7 @@ fi
 
 # Set backup directories
 local dest src ver
-	dest=/sdcard/Backup/Apps/Termux
+	dest=/sdcard/Android/backup/Termux
 	src=/data/data/com.termux/files
 	ver=$(date +%Y%m%d)
 
