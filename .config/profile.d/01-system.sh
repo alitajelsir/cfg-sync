@@ -16,8 +16,8 @@ ZDOTDIR=$HOME/.config/zsh
 
 # Fix ownership
 [[ $UID == 0 ]] ||
-	(fd . -u --owner=root $HOME $PREFIIX -X \
-	sudo chown $USERNAME:$USERNAME &)
+	(fd . -u --owner=root $HOME $PREFIIX -x \
+	sudo chown $USERNAME:$USERNAME '{}' &)
 
 # Remove tmp created by sudo
 [[ $UID != 0 ]] ||
