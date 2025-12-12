@@ -15,8 +15,8 @@ local dest src ver
 	mkdir -p $dest
 
 # Fix ownership
-fd . -u --owner=root $HOME $PREFIIX -x \
-		sudo chown $USERNAME:$USERNAME '{}'
+fd . -u --owner=root $HOME $PREFIIX -X \
+		sudo chown -R $USERNAME:$USERNAME
 
 # Start backup
 echo "Creating backup in $dest..."
