@@ -51,11 +51,14 @@ zstyle ':completion:*' list-grouped no
 HISTFILE=$ZDOTDIR/.zhistory
 SAVEHIST=$(( 10 * 1000 ))
 HISTSIZE=$(( 1.2 * SAVEHIST ))
-HISTORY_IGNORE='(-|..|/|~|cd|run-help)*'
+HISTORY_IGNORE='(-|.|/|~|cd|run-help)*'
 
 # Access on-line help
 unalias run-help
 autoload -Uz run-help
+
+# Create named directories
+hash -d zsh=$ZDOTDIR git=$GITDIR
 
 # Use emacs mode
 bindkey -e
