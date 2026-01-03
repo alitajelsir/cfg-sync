@@ -3,9 +3,6 @@
 # Disable znap asynchronous compilation
 zstyle ':znap:*' auto-compile no
 
-# Disable znap git maintenance
-zstyle ':znap:*:*' git-maintenance off
-
 # Set znap local and remote sources
 () {
 	local _znap_local _znap_remote
