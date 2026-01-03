@@ -41,12 +41,6 @@
 }
 
 
-# Allow path completion
-zstyle ':completion:*:paths' path-completion yes
-
-# Disable grouping matches
-zstyle ':completion:*' list-grouped no
-
 # Configure history file
 HISTFILE=$ZDOTDIR/.zhistory
 SAVEHIST=$(( 10 * 1000 ))

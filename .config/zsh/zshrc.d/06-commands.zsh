@@ -17,7 +17,7 @@
 		open=termux-open
 		plg="cd $(mktemp -d)"
 		rmi='rm -Iv'
-		rsp='rsync -P'
+		rsl='rsync -PW'
 		mdl=yt-dlp
 		mdla='yt-dlp -x -f ba/b'
 		mdls="yt-dlp --no-embed-metadata --no-embed-subs --no-embed-thumbnail \
