@@ -41,17 +41,11 @@
 }
 
 
-# Allow path completion
-zstyle ':completion:*:paths' path-completion yes
-
-# Disable grouping matches
-zstyle ':completion:*' list-grouped no
-
 # Configure history file
 HISTFILE=$ZDOTDIR/.zhistory
 SAVEHIST=$(( 10 * 1000 ))
 HISTSIZE=$(( 1.2 * SAVEHIST ))
-HISTORY_IGNORE='(-|..|/|~|cd |run-help)*'
+HISTORY_IGNORE='(-|.|/|~|cd |run-help)*'
 
 # Access on-line help
 unalias run-help

@@ -7,9 +7,6 @@ bindkey '^[w' where-is
 # Bind Ctrl+x a to alias expansion
 bindkey '^Xa' _expand_alias
 
-# Bind Ctrl+x w to word expansion
-bindkey '^Xw' _expand_word
-
 # Bind Alt+shift+s to prefix with sudo
 () {
   bindkey '^[S' $1

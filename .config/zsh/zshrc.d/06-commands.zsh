@@ -18,7 +18,7 @@
 		mvi='mv -iv'
 		plg="cd $(mktemp -d)"
 		rmi='rm -Iv'
-		rsp='rsync -P'
+		rsl='rsync -PW'
 		sudo='sudo '
 	)
 
