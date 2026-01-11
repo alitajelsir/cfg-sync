@@ -4,63 +4,72 @@
 	ss = status -sb
 [color "branch"]
 	plain = normal
-	remote = 6 normal
-	current = 4
-	local = 12 normal
-	upstream = 6 normal
+	remote = 6
+	current = 15
+	local = 12
+	upstream = 6
 [color "decorate"]
-	branch = 12 normal
-	tag = 5 normal
-	remotebranch = 6 normal
-	stash = 3 normal
-	grafted = 1 normal
-	HEAD = 4
+	branch = 12
+	tag = 5
+	remotebranch = 6
+	stash = 3
+	grafted = 1
+	HEAD = 7
 [color "diff"]
-	commit = 3 normal
-	newMoved = 5
-	oldMovedAlternativeDimmed = 8 dim
-	frag = 8 normal
-	oldMovedAlternative = 8
+	commit = 3
+	newMoved = 11
+	oldMovedAlternativeDimmed = 6 dim
+	frag = 8
+	oldMovedAlternative = 6
 	contextBold = normal bold
-	newBold = 2 bold
+	newBold = 10 bold
 	context = normal
 	oldMoved = 3
 	oldBold = 1 bold
-	newMovedDimmed = 5 dim
-	func = 8 normal
-	meta = 8 normal
-	newDimmed = 2 dim
-	newMovedAlternative = 4
-	new = 2
-	newMovedAlternativeDimmed = 4 dim
-	whitespace = normal 9
+	newMovedDimmed = 11
+	func = 8
+	meta = 8
+	newDimmed = 10
+	newMovedAlternative = 14
+	new = 10
+	newMovedAlternativeDimmed = 11
+	whitespace = normal
 	oldMovedDimmed = 3 dim
 	oldDimmed = 1 dim
 	old = 1
 	contextDimmed = normal dim
 [color "interactive"]
-	header = 8 normal bold
-	prompt = 4
-	help = 8 normal
-	error = 9 normal
+	header = 8 bold
+	prompt = 15
+	help = 8
+	error = 9
 [color "remote"]
-	hint = 8 normal
-	success = 10 normal
-	error = 9 normal
-	warning = 11 normal
+	hint = 8
+	success = 10
+	error = 9
+	warning = 11
 [color "status"]
-	branch = 12 normal
-	added = 10 normal
-	updated = 10 normal
-	localbranch = 12 normal
-	changed = 11 normal
+	branch = 12
+	added = 10
+	updated = 10
+	localbranch = 12
+	changed = 11
 	header = normal
-	remotebranch = 6 normal
-	nobranch = 1 normal
-	unmerged = 9 normal
-	untracked = 8 normal
+	remotebranch = 6
+	nobranch = 1
+	unmerged = 9
+	untracked = 8
 [diff]
-	colorMoved = zebra
+	tool = meld
+	colorMoved = dimmed-zebra
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$REMOTE" "$LOCAL"
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld "$REMOTE" "$MERGED" "$LOCAL" --output "$MERGED"
 [user]
-	email = alitajelsir@gmail.com
 	name = Ali Tajelsir
+	email = alitajelsir@gmail.com
